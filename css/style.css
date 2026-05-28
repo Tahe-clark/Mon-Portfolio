@@ -1,19 +1,7 @@
-/*
-  SEG3525 – Devoir 1 · Portfolio
-  FICHIER 02 : CSS personnalisé
-  ──────────────────────────────────────────────────────────────────
-  Ce fichier complète Bootstrap.  Il utilise des variables CSS
-  (custom properties) pour faciliter la personnalisation du thème.
 
-  COMMENT PERSONNALISER :
-  1. Changez les valeurs dans :root (couleurs, polices, espacements).
-  2. Ne modifiez pas les commentaires de section — ils vous guident.
-  3. Regardez le résultat dans le navigateur (F5 pour rafraîchir).
-*/
-
-/* ══════════════════════════════════════════════════════════════════
-   1. VARIABLES DE THÈME  (modifiez ici pour changer tout le site)
-══════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════
+ 1. VARIABLES DE THÈME
+══════════════════════════════ */
 :root {
   /* ── Couleurs principales ── */
   --color-primary:      #F2845C;   /* Accent / CTA – rouge-orange vif     */
@@ -174,19 +162,24 @@ a:hover { color: var(--color-primary-dark); }
   color: var(--color-text-muted);
   max-width: 560px;
 }
-
-/* Avatar placeholder (si pas de photo) */
-.hero-avatar {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: rgba(233,79,55,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(233,79,55,0.2);
+/*animation de flottement pour la photo du héros */
+#hero .hero-floating img {
+  animation: floatImage 4s ease-in-out infinite;
+  will-change: transform;
+  transition: 0.4s ease;
 }
 
+#hero .hero-floating img:hover {
+  box-shadow: 0 0 25px var(--color-primary),
+              0 0 35px var(--color-primary),
+              0 0 45px var(--color-primary);  
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
 
 /* ══════════════════════════════════════════════════════════════════
    6. SECTIONS – en-têtes et rythme
@@ -213,6 +206,11 @@ a:hover { color: var(--color-primary-dark); }
 /* ══════════════════════════════════════════════════════════════════
    7. STATISTIQUES (section À propos)
 ══════════════════════════════════════════════════════════════════ */
+#about {
+    background-color: #120d0e; /* Un noir très profond assorti à votre palette */
+    padding: var(--section-padding);
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Optionnel : une ligne très fine pour séparer du héros */
+}
 .stat-card {
   background: var(--color-card);
   border-radius: var(--border-radius-card);

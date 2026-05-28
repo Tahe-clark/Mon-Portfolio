@@ -64,11 +64,7 @@
   </nav>
 
 
-  <!-- ════════════════════════════════════════════════════════════════
-       SECTION HÉRO  (#hero)
-       • min-vh-100 = prend tout l'écran au chargement
-       • Remplacez le texte et adaptez la couleur de fond dans style.css
-  ═══════════════════════════════════════════════════════════════════ -->
+  <!-- SECTION HÉRO  (#hero)-->
   
   <section id="hero" class="min-vh-100 d-flex align-items-center">
     <div class="container">
@@ -80,7 +76,7 @@
           <h1 class="display-3 fw-bold mb-3">Kelyan Tahe</h1>
           <p class="lead mb-4">
             Étudiant en génie logiciel à l'Université d'Ottawa ·
-            Passionné par la création de sites web et d'applications qui impactent les utilisateurs.
+            Passionné par la création de sites web et d'applications utiles qui impactent les utilisateurs.
           </p>
           <div class="d-flex flex-wrap gap-3">
             <a href="#cases" class="btn btn-primary btn-lg">Voir mes projets</a>
@@ -89,10 +85,10 @@
         </div>
 
         <!-- Ma Photo -->
-        <div class="col-lg-5 text-center">
+        <div class="col-lg-5 text-center ">
   
           <img src="assets/maphoto.jpg" alt="Photo de Kelyan Tahe"
-             class="img-fluid rounded-circle shadow" style="max-width:320px">
+             class="img-fluid rounded-circle shadow hero-floating" style="max-width:320px">
 
           
         </div>
@@ -100,75 +96,51 @@
       </div>
     </div>
   </section>
-  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel"> <div class="carousel-indicators"> <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button> <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button> <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button> </div> <div class="carousel-inner"> <div class="carousel-item active"> <svg aria-hidden="true" class="bd-placeholder-img " height="100%" preserveAspectRatio="xMidYMid slice" width="100%" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg> <div class="container"> <div class="carousel-caption text-start"> <h1>Example headline.</h1> <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p> <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> </div> </div> </div> <div class="carousel-item"> <svg aria-hidden="true" class="bd-placeholder-img " height="100%" preserveAspectRatio="xMidYMid slice" width="100%" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg> <div class="container"> <div class="carousel-caption"> <h1>Another example headline.</h1> <p>Some representative placeholder content for the second slide of the carousel.</p> <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p> </div> </div> </div> <div class="carousel-item"> <svg aria-hidden="true" class="bd-placeholder-img " height="100%" preserveAspectRatio="xMidYMid slice" width="100%" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg> <div class="container"> <div class="carousel-caption text-end"> <h1>One more for good measure.</h1> <p>Some representative placeholder content for the third slide of this carousel.</p> <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> </div> </div> </div> </div> <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button> <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button> </div>
 
-  <!-- SECTION À PROPOS  -->
-  <section id="about" class="py-section">
-    <div class="container">
+<!-- SECTION À PROPOS -->
+<section id="about" class="py-section">
+  <div class="container">
 
-      <!-- En-tête de section -->
-      <div class="section-header text-center mb-5">
-        <h2 class="section-title">À propos de moi</h2>
-        <div class="section-divider mx-auto"></div>
-      </div>
+    <!-- En-tête de section -->
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">À propos de moi</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
 
-      <div class="row align-items-center g-5">
+    <div class="row">
+      <!-- On passe en col-lg-10 et on utilise mx-auto pour centrer le bloc de texte -->
+      <div class="col-lg-10 mx-auto text-center">
+        <p class="fs-5 mb-4">
+          Actuellement en deuxième année de génie logiciel à l'Université d'Ottawa, je me passionne pour la création d'applications concrètes qui optimisent le quotidien, tout en explorant l'univers du développement de jeux vidéo et de la robotique.
+          Grand amateur d'art, de dessin et de piano, je carbure aux défis complexes qui demandent de la réflexion et à l'expérimentation de nouvelles technologies.
+          Ce qui m'anime profondément dans le design UI/UX, c'est l'art de rendre mes outils fonctionnels aussi intuitifs qu'esthétiques.
+          C’est pour moi le moyen idéal de sublimer mes projets de code en leur offrant une présentation visuelle soignée, élégante et percutante sur le web.
+        </p>
 
-        <!-- Texte -->
-        <div class="col-lg-8">
-          <p class="fs-5 mb-4">
-            Actuellement en deuxième année de génie logiciel à l'Université d'Ottawa, je me passionne pour la création d'applications concrètes qui optimisent le quotidien, tout en explorant l'univers du développement de jeux vidéo et de la robotique.
-             Grand amateur d'art, de dessin et de piano, je carbure aux défis complexes qui demandent de la réflexion et à l'expérimentation de nouvelles technologies.
-              Ce qui m'anime profondément dans le design UI/UX, c'est l'art de rendre mes outils fonctionnels aussi intuitifs qu'esthétiques.
-               C’est pour moi le moyen idéal de sublimer mes projets de code en leur offrant une présentation visuelle soignée, élégante et percutante sur le web.
-          </p>
-
-          <!-- Compétences ou hobbies sous forme de badges -->
-          <div class="d-flex flex-wrap gap-2 mb-4">
-            <span class="badge bg-primary">HTML / CSS</span>
-            <span class="badge bg-primary">Bootstrap 5</span>
-            <span class="badge bg-secondary">Figma</span>
-            <span class="badge bg-secondary">Design centré usager</span>
-            <!-- Ajoutez vos propres compétences -->
-          </div>
-
-          <!-- Liens sociaux (optionnel) -->
-          <div class="d-flex gap-3">
-            <a href="https://github.com/Tahe-clark" class="social-link" target="_blank" rel="noopener">
-              <i class="bi bi-github fs-4"></i>
-            </a>
-            <a href="https://linkedin.com/in/clark-tahe" class="social-link" target="_blank" rel="noopener">
-              <i class="bi bi-linkedin fs-4"></i>
-            </a>
-          </div>
+        <!-- Badges centrés avec justify-content-center -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+          <span class="badge bg-primary">HTML / CSS</span>
+          <span class="badge bg-primary">Bootstrap 5</span>
+          <span class="badge bg-secondary">Figma</span>
+          <span class="badge bg-secondary">Design centré usager</span>
         </div>
 
-        <!-- Statistiques rapides -->
-        <div class="col-lg-4">
-          <div class="row g-3">
-            <div class="col-6">
-              <div class="stat-card text-center p-3">
-                <div class="stat-number">4</div>
-                <div class="stat-label">Projets à venir</div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="stat-card text-center p-3">
-                <div class="stat-number">1er</div>
-                <div class="stat-label">Semestre UI/UX</div>
-              </div>
-            </div>
-          </div>
+        <!-- Liens sociaux centrés avec justify-content-center -->
+        <div class="d-flex justify-content-center gap-3">
+          <a href="https://github.com/Tahe-clark" class="social-link" target="_blank" rel="noopener">
+            <i class="bi bi-github fs-4"></i>
+          </a>
+          <a href="https://linkedin.com/in/clark-tahe" class="social-link" target="_blank" rel="noopener">
+            <i class="bi bi-linkedin fs-4"></i>
+          </a>
         </div>
-
       </div>
     </div>
-  </section>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       SECTION COMMENT JE TRAVAILLE  (#work)
-       Exigence du devoir : votre façon de travailler / votre formation.
-  ═══════════════════════════════════════════════════════════════════ -->
+  </div>
+</section>
+
+  <!-- SECTION COMMENT JE TRAVAILLE -->
   <section id="work" class="py-section bg-section-alt">
     <div class="container">
 
@@ -208,8 +180,8 @@
             </div>
             <h3 class="h5 fw-bold">Mon processus</h3>
             <p>
-Actuellement étudiant en génie logiciel, je développe activement mes compétences en design UI/UX dans le cadre du coursSEG3525 : Conception et Analyse des Interfaces Usagers. 
-
+            Actuellement étudiant en génie logiciel, je développe activement mes compétences en design UI/UX dans le cadre 
+            du coursSEG3525 : Conception et Analyse des Interfaces Usagers.
             </p>
           </div>
         </div>
@@ -226,7 +198,6 @@ Actuellement étudiant en génie logiciel, je développe activement mes compéte
               <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Figma</li>
               <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Bootstrap 5</li>
               <li><i class="bi bi-check-circle-fill text-primary me-2"></i>GitHub</li>
-              <!-- Ajoutez vos propres outils -->
             </ul>
           </div>
         </div>
@@ -235,10 +206,7 @@ Actuellement étudiant en génie logiciel, je développe activement mes compéte
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       SECTION 4 ÉTUDES DE CAS  (#cases)
-       Exigence du devoir : 4 images cliquables → pages placeholder
-  ═══════════════════════════════════════════════════════════════════ -->
+  <!--SECTION 4 ÉTUDES DE CAS 4 images cliquables -->
   <section id="cases" class="py-section">
   <div class="container">
 
@@ -246,7 +214,7 @@ Actuellement étudiant en génie logiciel, je développe activement mes compéte
     <div class="section-header text-center mb-5">
       <h2 class="section-title">Mes projets</h2>
       <div class="section-divider mx-auto"></div>
-      <p class="text-muted mt-3">Cliquez sur l'image pour l'agrandir.</p>
+      <p class="text-muted mt-3">Découvrez quelques-uns de mes travaux récents.</p>
     </div>
 
     <!-- ── Projet 1 : Site de services ── -->
@@ -354,15 +322,14 @@ Actuellement étudiant en génie logiciel, je développe activement mes compéte
   </div>
 </section>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════════════════════════════ -->
+  <!--FOOTER-->
+  
   <footer class="py-4">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
           <span class="fw-bold text-primary">Kelyan Tahe</span>
-          <span class="text-muted ms-2">· SEG3525 · Université d'Ottawa · 2026</span>
+          <span class="text-muted ms-2">N'hesitez pas a me contacter !</span>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <a href="https://github.com/Tahe-clark" class="social-link me-3" target="_blank" rel="noopener">
