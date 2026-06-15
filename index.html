@@ -48,13 +48,15 @@
 
       <!-- Liens de navigation -->
       <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto gap-2">
+        <!-- Ajout de align-items-center ici -->
+        <ul class="navbar-nav ms-auto gap-2 align-items-center">
           <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
           <li class="nav-item"><a class="nav-link" href="#work">Mon approche</a></li>
           <li class="nav-item"><a class="nav-link" href="#cases">Mes Projets</a></li>
           <li class="nav-item">
-            <a class="btn btn-outline-primary btn-sm" href="mailto:[kelyanclark@gmail.com]">
-              <i class="bi bi-envelope me-1"></i>Contact
+            <!-- Ajout de ms-lg-2 pour l'espacer un peu du texte "Mes Projets" -->
+            <a class="btn btn-outline-primary btn-sm ms-lg-2" href="mailto:ctahe033@uottawa.ca">
+              <i class="bi bi-envelope-at-fill me-2"></i>Contact
             </a>
           </li>
         </ul>
@@ -223,23 +225,25 @@
         <!-- Côté gauche : Image -->
         <div class="col-lg-7">
           <div class="project-image-container">
-            <a href="assets/bicycle-repairs.jpg" target="_blank" title="Cliquez pour agrandir">
-              <img src="assets/bicycle-repairs.jpg" alt="Aperçu du projet Réparation de Vélos" class="project-img">
+            <a href="https://docteur-cheveux.vercel.app/" target="_blank" title="Cliquez pour voir le projet Docteur Cheveux">
+              <img src="assets/coiffeuse-profession.jpg" alt="Aperçu du projet Docteur Cheveux" class="project-img">
             </a>
           </div>
         </div>
         <!-- Côté droit : Texte -->
         <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center">
-          <h3 class="display-6 fw-bold mb-3" style="color: var(--color-primary);">Réparation de Vélos</h3>
-          <p class="mb-4">Site de services pour réparer les vélos à Ottawa.</p>
+          <h3 class="display-6 fw-bold mb-3" style="color: var(--color-primary);">Docteur Cheveux</h3>
+          <p class="mb-4">Prototype d'application web dédié au diagnostic et à la prise de rendez-vous pour les soins capillaires.</p>
           <div class="project-meta mb-4">
-            <span class="text-primary small fw-semibold d-block mb-3">À venir <i class="bi bi-arrow-right"></i></span>
+            <span class="text-primary small fw-semibold d-block mb-3">Terminé <i class="bi bi-bookmark-check-fill"></i></span>
             <div class="d-flex flex-wrap gap-2">
-              <span class="badge border border-secondary text-light">Python</span>
-              <span class="badge border border-secondary text-light">MySQL</span>
+              <span class="badge border border-secondary text-light">React</span>
+              <span class="badge border border-secondary text-light">Bootstrap</span>
+              <span class="badge border border-secondary text-light">JavaScript</span>
+              <span class="badge border border-secondary text-light">HTML/CSS</span>
             </div>
           </div>
-          <a href="assets/bicycle-repairs.jpg" class="btn btn-primary btn-lg w-100 py-3">Voir le projet</a>
+          <a href="https://docteur-cheveux.vercel.app/" class="btn btn-primary btn-lg w-100 py-3">Voir le projet</a>
         </div>
       </div>
     </div>
@@ -264,7 +268,7 @@
               <span class="badge border border-secondary text-light">HTML/CSS</span>
             </div>
           </div>
-          <a href="assets/jeu-de-memoire.jpg" class="btn btn-primary btn-lg w-100 py-3">Jouer au projet</a>
+          <a href="pages/projet2.html" class="btn btn-primary btn-lg w-100 py-3">Jouer au projet</a>
         </div>
       </div>
     </div>
@@ -289,7 +293,7 @@
               <span class="badge border border-secondary text-light">MongoDB</span>
             </div>
           </div>
-          <a href="assets/commerce-electronique.jpg" class="btn btn-primary btn-lg w-100 py-3">Voir la boutique</a>
+          <a href="pages/projet3.html" class="btn btn-primary btn-lg w-100 py-3">Voir la boutique</a>
         </div>
       </div>
     </div>
@@ -314,7 +318,7 @@
               <span class="badge border border-secondary text-light">Tableau</span>
             </div>
           </div>
-          <a href="assets/analyse-bi.jpg" class="btn btn-primary btn-lg w-100 py-3">Voir l'analyse</a>
+          <a href="pages/projet4.html" class="btn btn-primary btn-lg w-100 py-3">Voir l'analyse</a>
         </div>
       </div>
     </div>
