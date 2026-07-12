@@ -233,21 +233,45 @@ a:hover { color: var(--color-primary-dark); }
 /* ══════════════════════════════════════════════════════════════════
    8. CARTES DE FONCTIONNALITÉS (section Comment je travaille)
 ══════════════════════════════════════════════════════════════════ */
-/* --- Section Comment je travaille (Style personnalisé) --- */
+/* --- Section Comment je travaille (palette plus équilibrée) --- */
 .feature-card {
-  background-color: #BF6E50 !important; /* Fond Terracotta lumineux */
-  border: none;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--border-radius-card);
-  padding: 2.5rem;
+  padding: 2.2rem;
+  min-height: 100%;
   transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(242, 132, 92, 0.18) 0%, rgba(38, 26, 27, 0.92) 100%);
 }
 
-/* 1. LES ÉLÉMENTS FONCÉS (Titre, Icônes, Liens) */
-.feature-card h3, 
-.feature-card .feature-icon i, 
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.06), transparent 45%);
+  pointer-events: none;
+}
+
+.feature-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card:nth-child(2) {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(53, 38, 39, 0.95) 100%);
+}
+
+.feature-card:nth-child(3) {
+  background: linear-gradient(135deg, rgba(191, 110, 80, 0.28) 0%, rgba(18, 13, 14, 0.95) 100%);
+}
+
+.feature-card h3,
+.feature-card .feature-icon i,
 .feature-card .bi-check-circle-fill,
 .feature-card a {
-  color: #261A1B !important; /* Votre brun très foncé */
+  color: var(--color-primary) !important;
 }
 
 .feature-card h3 {
@@ -257,22 +281,31 @@ a:hover { color: var(--color-primary-dark); }
 }
 
 .feature-card a {
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 700;
 }
 
-/* 2. LE TEXTE GRISÉ (Le petit paragraphe) */
-/* On utilise un blanc transparent pour donner cet aspect gris/doux sur le orange */
-.feature-card p, 
+.feature-card p,
 .feature-card li {
-  color: rgba(255, 255, 255, 0.85) !important; 
+  color: rgba(255, 255, 255, 0.86) !important;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+.feature-card .feature-icon {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
 }
 
 .feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(242, 132, 92, 0.35);
 }
 
 
