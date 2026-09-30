@@ -1,360 +1,576 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Kelyan Tahe, étudiant en génie logiciel à l'Université d'Ottawa : développement web, design UI/UX et projets personnels.">
-    <meta name="author" content="Kelyan Tahe">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Kelyan Tahe, étudiant en génie logiciel (coop) à l'Université d'Ottawa : applications web full-stack, temps réel, design UI/UX.">
+  <meta name="author" content="Kelyan Tahe">
+  <meta property="og:title" content="Kelyan Tahe — Portfolio">
+  <meta property="og:description" content="Étudiant en génie logiciel (coop) à l'Université d'Ottawa. Projets web full-stack, temps réel et UI/UX.">
+  <meta property="og:image" content="assets/maphoto.jpg">
+  <meta name="theme-color" content="#261A1B">
 
-    <!-- ── Bootstrap CSS ── -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Kelyan Tahe — Portfolio</title>
 
-    <!-- ── Bootstrap Icons ── -->
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <!-- ── Bootstrap CSS ── -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- ── Google Fonts ── -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inder&display=swap" 
-      rel="stylesheet"
-    />
+  <!-- ── Bootstrap Icons ── -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- ── mon css ── -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inder&display=swap" rel="stylesheet">
 
-    <title>Kelyan's Portfolio</title>
+  <!-- ── Mon CSS ── -->
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<!-- ── Ma navbar ── -->
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-<nav class="navbar navbar-expand-lg fixed-top" id="main-nav">
+  <!-- ═════════════ NAVBAR ═════════════ -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="main-nav" aria-label="Navigation principale">
     <div class="container">
-      <!-- Kelyan Tahe -->
       <a class="navbar-brand fw-bold" href="#hero">Kelyan Tahe</a>
 
-      <!-- Bouton hamburger (mobile) -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navMenu"
-        aria-controls="navMenu"
-        aria-expanded="false"
-        aria-label="Ouvrir le menu"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Ouvrir le menu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Liens de navigation -->
       <div class="collapse navbar-collapse" id="navMenu">
-        <!-- Ajout de align-items-center ici -->
-        <ul class="navbar-nav ms-auto gap-2 align-items-center">
+        <ul class="navbar-nav ms-auto gap-lg-2 align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
           <li class="nav-item"><a class="nav-link" href="#work">Mon approche</a></li>
-          <li class="nav-item"><a class="nav-link" href="#cases">Mes Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
           <li class="nav-item">
-            <!-- Ajout de ms-lg-2 pour l'espacer un peu du texte "Mes Projets" -->
-            <a class="btn btn-outline-primary btn-sm ms-lg-2" href="mailto:ctahe033@uottawa.ca">
-              <i class="bi bi-envelope-at-fill me-2"></i>Contact
+            <a class="btn btn-outline-primary btn-sm ms-lg-2 my-2 my-lg-0" href="#contact">
+              <i class="bi bi-envelope-at-fill me-2" aria-hidden="true"></i>Contact
             </a>
           </li>
         </ul>
       </div>
-
     </div>
   </nav>
 
+  <main id="main">
 
-  <!-- SECTION HÉRO  (#hero)-->
-  
-  <section id="hero" class="min-vh-100 d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center g-5">
+    <!-- ═════════════ HÉRO (version d'origine) ═════════════ -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
 
-        <!-- Texte de présentation -->
-        <div class="col-lg-7">
-          <p class="text-primary fw-semibold mb-2">Salut, je suis</p>
-          <h1 class="display-3 fw-bold mb-3">Kelyan Tahe</h1>
-          <p class="lead mb-4">
-            Étudiant en génie logiciel à l'Université d'Ottawa ·
-            Passionné par la création de sites web et d'applications utiles qui impactent les utilisateurs.
-          </p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#cases" class="btn btn-primary btn-lg">Voir mes projets</a>
-            <a href="#about" class="btn btn-outline-light btn-lg">En savoir plus</a>
-          </div>
-        </div>
-
-        <!-- Ma Photo -->
-        <div class="col-lg-5 text-center hero-floating">
-  
-          <img src="assets/maphoto.jpg" alt="Photo de Kelyan Tahe"
-             class="img-fluid rounded-circle shadow hero-floating" style="max-width:320px">
-
-          
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-<!-- SECTION À PROPOS -->
-<section id="about" class="py-section">
-  <div class="container">
-
-    <!-- En-tête de section -->
-    <div class="section-header text-center mb-5">
-      <h2 class="section-title">À propos de moi</h2>
-      <div class="section-divider mx-auto"></div>
-    </div>
-
-    <div class="row">
-      <!-- On passe en col-lg-10 et on utilise mx-auto pour centrer le bloc de texte -->
-      <div class="col-lg-10 mx-auto text-center">
-        <p class="fs-5 mb-4">
-          Actuellement en deuxième année de génie logiciel à l'Université d'Ottawa, je me passionne pour la création d'applications concrètes qui optimisent le quotidien, tout en explorant l'univers du développement de jeux vidéo et de la robotique.
-          Grand amateur d'art, de dessin et de piano, je carbure aux défis complexes qui demandent de la réflexion et à l'expérimentation de nouvelles technologies.
-          Ce qui m'anime profondément dans le design UI/UX, c'est l'art de rendre mes outils fonctionnels aussi intuitifs qu'esthétiques.
-          C’est pour moi le moyen idéal de sublimer mes projets de code en leur offrant une présentation visuelle soignée, élégante et percutante sur le web.
-        </p>
-
-        <!-- Badges centrés avec justify-content-center -->
-        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
-          <span class="badge bg-primary">HTML / CSS</span>
-          <span class="badge bg-primary">Bootstrap 5</span>
-          <span class="badge bg-secondary">Figma</span>
-          <span class="badge bg-secondary">Design centré usager</span>
-        </div>
-
-        <!-- Liens sociaux centrés avec justify-content-center -->
-        <div class="d-flex justify-content-center gap-3">
-          <a href="https://github.com/Tahe-clark" aria-label="GitHub de Kelyan Tahe" class="social-link" target="_blank" rel="noopener">
-            <i class="bi bi-github fs-4"></i>
-          </a>
-          <a href="https://linkedin.com/in/clark-tahe" aria-label="LinkedIn de Kelyan Tahe" class="social-link" target="_blank" rel="noopener">
-            <i class="bi bi-linkedin fs-4"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-  <!-- SECTION COMMENT JE TRAVAILLE -->
-  <section id="work" class="py-section bg-section-alt">
-    <div class="container">
-
-      <div class="section-header text-center mb-5">
-        <h2 class="section-title">Comment je travaille</h2>
-        <div class="section-divider mx-auto"></div>
-      </div>
-
-      <div class="row g-4">
-
-        <!-- Carte 1 – Formation actuelle -->
-        <div class="col-md-4">
-          <div class="feature-card h-100 p-4">
-            <div class="feature-icon mb-3">
-              <i class="bi bi-mortarboard-fill fs-1 text-primary"></i>
-            </div>
-            <h3 class="h5 fw-bold">Formation en cours</h3>
-            <p>
-              Je suis le cours
-              <strong>SEG3525 – Conception et Analyse des Interfaces Usagers</strong>
-              à l'Université d'Ottawa.
-              J'apprends les principes de communication visuelle, le design centré
-              sur l'usager et les évaluations heuristiques.
+          <!-- Texte de présentation -->
+          <div class="col-lg-7">
+            <span class="hero-tag mb-3"><i class="bi bi-stars" aria-hidden="true"></i>À la recherche d'un stage coop</span>
+            <p class="text-primary fw-semibold mb-2">Salut, je suis</p>
+            <h1 class="display-3 fw-bold mb-3">Kelyan Tahe</h1>
+            <p class="lead mb-4">
+              Étudiant en génie logiciel à l'Université d'Ottawa ·
+              Passionné par la création de sites web et d'applications utiles qui impactent les utilisateurs.
             </p>
-            <a href="https://www.nngroup.com" target="_blank" rel="noopener"
-               class="text-primary text-decoration-none">
-              <i class="bi bi-box-arrow-up-right me-1"></i>Référence NN/g
-            </a>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#projects" class="btn btn-primary btn-lg">Voir mes projets</a>
+              <a href="#about" class="btn btn-outline-light btn-lg">En savoir plus</a>
+            </div>
           </div>
+
+          <!-- Ma photo -->
+          <div class="col-lg-5 text-center hero-floating">
+            <img src="assets/maphoto.jpg" alt="Photo de Kelyan Tahe"
+                 class="img-fluid rounded-circle shadow hero-floating" style="max-width:320px">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ À PROPOS ═════════════ -->
+    <section id="about" class="py-section">
+      <div class="container">
+        <div class="section-header text-center mb-5 reveal">
+          <h2 class="section-title">À propos de moi</h2>
+          <div class="section-divider mx-auto"></div>
         </div>
 
-        <!-- Carte 2 – Processus de conception -->
-        <div class="col-md-4">
-          <div class="feature-card h-100 p-4">
-            <div class="feature-icon mb-3">
-              <i class="bi bi-pencil-square fs-1 text-primary"></i>
-            </div>
-            <h3 class="h5 fw-bold">Mon processus</h3>
-            <p>
-            Actuellement, je développe activement mes compétences en design UI/UX dans le cadre 
-            du cours SEG3525 : Conception et Analyse des Interfaces Usagers.
+        <div class="row">
+          <div class="col-lg-9 mx-auto text-center reveal">
+            <p class="fs-5 mb-4">
+              Je suis étudiant en génie logiciel à l'Université d'Ottawa, dans le programme coop.
+              J'aime construire des applications concrètes qui règlent de vrais problèmes :
+              une plateforme de surveillance vidéo en temps réel, un système de vote pour une école,
+              une boutique en ligne pour une marque de bijoux.
             </p>
-          </div>
-        </div>
+            <p class="fs-5 mb-4">
+              Ce qui me distingue, c'est le soin que je porte à l'expérience utilisateur :
+              je veux que mes outils soient aussi intuitifs qu'ils sont solides.
+              En dehors du code, je dessine, je joue du piano et je m'intéresse au développement
+              de jeux vidéo et à la robotique.
+            </p>
 
-        <!-- Carte 3 – Outils -->
-        <div class="col-md-4">
-          <div class="feature-card h-100 p-4">
-            <div class="feature-icon mb-3">
-              <i class="bi bi-tools fs-1 text-primary"></i>
-            </div>
-            <h3 class="h5 fw-bold">Mes outils</h3>
-            <ul class="list-unstyled">
-              <li><i class="bi bi-check-circle-fill text-primary me-2"></i>VS Code</li>
-              <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Figma</li>
-              <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Bootstrap 5</li>
-              <li><i class="bi bi-check-circle-fill text-primary me-2"></i>GitHub</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!--SECTION 4 ÉTUDES DE CAS 4 images cliquables -->
-  <section id="cases" class="py-section">
-  <div class="container">
-
-    <!-- En-tête -->
-    <div class="section-header text-center mb-5">
-      <h2 class="section-title">Mes projets</h2>
-      <div class="section-divider mx-auto"></div>
-      <p class="text-muted mt-3">Découvrez quelques-uns de mes travaux récents.</p>
-    </div>
-
-    <!-- ── Projet 1 : Site de services ── -->
-    <div class="project-box mb-5">
-      <div class="row g-0 align-items-stretch">
-        <!-- Côté gauche : Image -->
-        <div class="col-lg-7">
-          <div class="project-image-container">
-            <a href="https://docteur-cheveux.vercel.app/" target="_blank" rel="noopener" title="Cliquez pour voir le projet Docteur Cheveux">
-              <img src="assets/coiffeuse-profession.jpg" alt="Aperçu du projet Docteur Cheveux" class="project-img">
-            </a>
-          </div>
-        </div>
-        <!-- Côté droit : Texte -->
-        <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center">
-          <h3 class="display-6 fw-bold mb-3" style="color: var(--color-primary);">Docteur Cheveux</h3>
-          <p class="mb-4">Prototype d'application web dédié au diagnostic et à la prise de rendez-vous pour les soins capillaires.</p>
-          <div class="project-meta mb-4">
-            <span class="text-primary small fw-semibold d-block mb-3">Terminé <i class="bi bi-bookmark-check-fill"></i></span>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge border border-secondary text-light">React</span>
-              <span class="badge border border-secondary text-light">Bootstrap</span>
-              <span class="badge border border-secondary text-light">JavaScript</span>
-              <span class="badge border border-secondary text-light">HTML/CSS</span>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="https://github.com/Tahe-clark" aria-label="GitHub de Kelyan Tahe" class="social-link" target="_blank" rel="noopener">
+                <i class="bi bi-github fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com/in/clark-tahe" aria-label="LinkedIn de Kelyan Tahe" class="social-link" target="_blank" rel="noopener">
+                <i class="bi bi-linkedin fs-4" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:ctahe033@uottawa.ca" aria-label="Courriel de Kelyan Tahe" class="social-link">
+                <i class="bi bi-envelope-fill fs-4" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <a href="https://docteur-cheveux.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-lg w-100 py-3">Voir le projet</a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ── Projet 2 : Jeu de mémoire ── -->
-    <div class="project-box mb-5">
-      <div class="row g-0 align-items-stretch">
-        <div class="col-lg-7">
-          <div class="project-image-container">
-            <a href="https://memorizz-three.vercel.app/" target="_blank" rel="noopener">
-              <img src="assets/jeu-de-memoire.jpg" alt="Jeu de Mémoire" class="project-img">
-            </a>
-          </div>
+    <!-- ═════════════ COMPÉTENCES ═════════════ -->
+    <section id="skills" class="py-section bg-section-alt">
+      <div class="container">
+        <div class="section-header text-center mb-5 reveal">
+          <h2 class="section-title">Compétences</h2>
+          <div class="section-divider mx-auto"></div>
         </div>
-        <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center">
-          <h3 class="display-6 fw-bold mb-3" style="color: var(--color-primary);">Jeu de mémoire</h3>
-          <p class="mb-4">Site de jeu de mémoire pour tester ses capacités cognitives.</p>
-          <div class="project-meta mb-4">
-            <span class="text-primary small fw-semibold d-block mb-3">Terminé <i class="bi bi-bookmark-check-fill"></i></span>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge border border-secondary text-light">JavaScript</span>
-              <span class="badge border border-secondary text-light">HTML/CSS</span>
+
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+          <div class="col reveal">
+            <div class="skill-group h-100">
+              <h3><i class="bi bi-code-slash me-2" aria-hidden="true"></i>Langages</h3>
+              <ul class="tech-list">
+                <li>JavaScript</li><li>TypeScript</li><li>Python</li><li>Java</li>
+                <li>C</li><li>SQL</li><li>HTML / CSS</li>
+              </ul>
             </div>
           </div>
-          <a href="https://memorizz-three.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-lg w-100 py-3">Jouer au projet</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Projet 3 : E-commerce ── -->
-    <div class="project-box mb-5">
-      <div class="row g-0 align-items-stretch">
-        <div class="col-lg-7">
-          <div class="project-image-container">
-            <a href="https://palma-eta.vercel.app/" target="_blank" rel="noopener">
-              <img src="assets/commerce-electronique.jpg" alt="E-commerce" class="project-img">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center">
-          <h3 class="display-6 fw-bold mb-3" style="color: var(--color-primary);">E-commerce</h3>
-          <p class="mb-4">Site de vente de produits en ligne avec panier d'achat.</p>
-          <div class="project-meta mb-4">
-            <span class="text-primary small fw-semibold d-block mb-3">Terminé <i class="bi bi-bookmark-check-fill"></i></span>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge border border-secondary text-light">Node.js</span>
-              <span class="badge border border-secondary text-light">MongoDB</span>
+          <div class="col reveal">
+            <div class="skill-group h-100">
+              <h3><i class="bi bi-window me-2" aria-hidden="true"></i>Front-end</h3>
+              <ul class="tech-list">
+                <li>React</li><li>Next.js</li><li>Vite</li>
+                <li>Bootstrap</li><li>Tailwind CSS</li><li>Figma</li>
+              </ul>
             </div>
           </div>
-          <a href="https://palma-eta.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-lg w-100 py-3">Voir la boutique</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Projet 4 : Analyse / BI ── -->
-    <div class="project-box mb-5">
-      <div class="row g-0 align-items-stretch">
-        <div class="col-lg-7">
-          <div class="project-image-container">
-            <a href="https://black-friday-electronics-dashboard.vercel.app/" target="_blank" rel="noopener">
-              <img src="assets/analyse-bi.png" alt="Analyse BI" class="project-img">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center">
-          <h3 class="display-6 fw-bold mb-3" style="color: var(--color-primary);">Analyse / BI</h3>
-          <p class="mb-4">Outils d'analyse et de reporting pour la prise de décision.</p>
-          <div class="project-meta mb-4">
-            <span class="text-primary small fw-semibold d-block mb-3">Terminé <i class="bi bi-bookmark-check-fill"></i></span>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge border border-secondary text-light">Python</span>
-              <span class="badge border border-secondary text-light">Tableau</span>
+          <div class="col reveal">
+            <div class="skill-group h-100">
+              <h3><i class="bi bi-hdd-stack me-2" aria-hidden="true"></i>Back-end et données</h3>
+              <ul class="tech-list">
+                <li>Django</li><li>Node.js</li><li>WebSockets</li><li>WebRTC</li>
+                <li>PostgreSQL</li><li>Supabase</li><li>MongoDB</li><li>SQLite</li>
+              </ul>
             </div>
           </div>
-          <a href="https://black-friday-electronics-dashboard.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-lg w-100 py-3">Voir l'analyse</a>
+          <div class="col reveal">
+            <div class="skill-group h-100">
+              <h3><i class="bi bi-tools me-2" aria-hidden="true"></i>Outils et qualité</h3>
+              <ul class="tech-list">
+                <li>Git / GitHub</li><li>JUnit</li><li>JaCoCo</li><li>Linux</li>
+                <li>Vercel</li><li>Render</li><li>Tableau</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <!-- ═════════════ MON APPROCHE ═════════════ -->
+    <section id="work" class="py-section">
+      <div class="container">
+        <div class="section-header text-center mb-5 reveal">
+          <h2 class="section-title">Mon approche</h2>
+          <div class="section-divider mx-auto"></div>
+        </div>
 
-  <!--FOOTER-->
+        <div class="row g-4">
 
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="feature-card h-100 p-4">
+              <div class="feature-icon mb-3"><i class="bi bi-pencil-square fs-1" aria-hidden="true"></i></div>
+              <h3 class="h5 fw-bold">Mon processus</h3>
+              <ol class="process-list">
+                <li><strong>Comprendre</strong> : qui est l'usager et quel problème il vit.</li>
+                <li><strong>Esquisser</strong> : maquettes et parcours dans Figma.</li>
+                <li><strong>Construire</strong> : prototype fonctionnel, puis version déployée.</li>
+                <li><strong>Tester</strong> : tests, évaluation heuristique et itérations.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="feature-card h-100 p-4">
+              <div class="feature-icon mb-3"><i class="bi bi-mortarboard-fill fs-1" aria-hidden="true"></i></div>
+              <h3 class="h5 fw-bold">Formation</h3>
+              <p class="mb-2">Baccalauréat en génie logiciel (coop), Université d'Ottawa.</p>
+              <ul class="list-unstyled small mb-0">
+                <li><i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>SEG3525 : conception d'interfaces usagers</li>
+                <li><i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>SEG3503 : vérification et tests logiciels</li>
+                <li><i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>CSI3531 : systèmes d'exploitation</li>
+                <li><i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>SEG3501 : ingénierie des exigences</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4 reveal">
+            <div class="feature-card h-100 p-4">
+              <div class="feature-icon mb-3"><i class="bi bi-rocket-takeoff-fill fs-1" aria-hidden="true"></i></div>
+              <h3 class="h5 fw-bold">Ce que je vise</h3>
+              <p>
+                Des projets <strong>déployés et utilisés</strong>, pas seulement des maquettes.
+                Mes projets web sont en ligne et leur code est public sur GitHub.
+              </p>
+              <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noopener" class="text-decoration-none">
+                <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i>Mes références : heuristiques de Nielsen
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ PROJETS ═════════════ -->
+    <section id="projects" class="py-section bg-section-alt">
+      <div class="container">
+        <div class="section-header text-center mb-5 reveal">
+          <h2 class="section-title">Mes projets</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="section-subtitle mt-3">Du prototype UX à l'application full-stack déployée.</p>
+        </div>
+
+        <!-- ── Projets phares (grand format) ── -->
+
+        <!-- Sentinel -->
+        <article class="project-feature mb-5 reveal">
+          <div class="row g-0">
+            <div class="col-lg-7">
+              <a class="feature-media media-sentinel" href="https://sentinel-web-snowy.vercel.app/" target="_blank" rel="noopener" aria-label="Ouvrir Sentinel">
+                <img src="assets/sentinel-cover.svg" alt="Illustration du tableau de bord Sentinel : flux vidéo en direct et liste d'appareils" width="1600" height="1000" loading="lazy" decoding="async">
+              </a>
+            </div>
+            <div class="col-lg-5">
+              <div class="feature-body">
+                <div class="project-meta"><span class="status status-live">En ligne</span><span>Projet phare · Full-stack</span></div>
+                <h3 class="feature-title">Sentinel</h3>
+                <p>Plateforme de surveillance à distance : un appareil diffuse sa caméra en direct vers un tableau de bord web sécurisé.</p>
+                <p class="project-highlight"><strong>Défi :</strong> établir la vidéo pair-à-pair (WebRTC) entre réseaux différents, avec un serveur de signalisation WebSocket et un relais TURN.</p>
+                <ul class="tech-list">
+                  <li>React</li><li>TypeScript</li><li>Django Channels</li><li>PostgreSQL</li><li>WebRTC</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://sentinel-web-snowy.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-lg flex-fill">Voir le projet</a>
+                  <a href="https://github.com/Tahe-clark/Sentinel" target="_blank" rel="noopener" class="btn btn-ghost btn-lg" aria-label="Code source de Sentinel sur GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- VoteBal (image à droite sur ordinateur) -->
+        <article class="project-feature mb-5 reveal">
+          <div class="row g-0">
+            <div class="col-lg-7 order-lg-2">
+              <a class="feature-media media-votebal" href="https://prom-vote-platform.vercel.app/vote" target="_blank" rel="noopener" aria-label="Ouvrir VoteBal">
+                <img src="assets/votebal-cover.svg" alt="Illustration de VoteBal : cartes de vote pour le roi et la reine du bal" width="1600" height="1000" loading="lazy" decoding="async">
+              </a>
+            </div>
+            <div class="col-lg-5 order-lg-1">
+              <div class="feature-body">
+                <div class="project-meta"><span class="status status-live">En ligne</span><span>Projet phare · Client réel</span></div>
+                <h3 class="feature-title">VoteBal</h3>
+                <p>Plateforme de vote en ligne pour élire le roi et la reine du bal d'une école en Côte d'Ivoire, avec tableau de bord administrateur.</p>
+                <p class="project-highlight"><strong>Défi :</strong> garantir un seul vote par personne et par catégorie grâce à un jeton anonyme vérifié côté serveur, et ouvrir ou fermer le vote depuis l'espace admin.</p>
+                <ul class="tech-list">
+                  <li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Tailwind CSS</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://prom-vote-platform.vercel.app/vote" target="_blank" rel="noopener" class="btn btn-primary btn-lg flex-fill">Voir le projet</a>
+                  <a href="https://github.com/Tahe-clark/prom-vote-platform" target="_blank" rel="noopener" class="btn btn-ghost btn-lg" aria-label="Code source de VoteBal sur GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Autres projets ── -->
+        <h3 class="subsection-title text-center mt-5 mb-4 reveal">Autres projets</h3>
+
+        <div class="project-filters d-flex flex-wrap justify-content-center gap-2 mb-5 reveal" role="group" aria-label="Filtrer les projets">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">Tous</button>
+          <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web et UX</button>
+          <button type="button" class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile et jeux</button>
+          <button type="button" class="filter-btn" data-filter="systems" aria-pressed="false">Systèmes et qualité</button>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3" id="project-grid">
+
+          <!-- Docteur Cheveux -->
+          <div class="col project-item reveal" data-category="web">
+            <article class="project-card h-100">
+              <a class="project-cover" href="https://docteur-cheveux.vercel.app/" target="_blank" rel="noopener" aria-label="Ouvrir Docteur Cheveux">
+                <img src="assets/coiffeuse-profession.webp" alt="Aperçu du projet Docteur Cheveux" width="1200" height="800" loading="lazy" decoding="async">
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-live">En ligne</span><span>Web · UX</span></div>
+                <h3>Docteur Cheveux</h3>
+                <p>Application web de diagnostic capillaire et de prise de rendez-vous pour un salon de coiffure.</p>
+                <p class="project-highlight"><strong>Démarche :</strong> prototype conçu selon une démarche centrée sur l'usager, dans le cadre du cours SEG3525.</p>
+                <ul class="tech-list">
+                  <li>React</li><li>JavaScript</li><li>Bootstrap</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://docteur-cheveux.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary flex-fill">Voir le projet</a>
+                  <a href="https://github.com/Tahe-clark/docteur-cheveux" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Code source de Docteur Cheveux sur GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Palma -->
+          <div class="col project-item reveal" data-category="web">
+            <article class="project-card h-100">
+              <a class="project-cover" href="https://palma-eta.vercel.app/" target="_blank" rel="noopener" aria-label="Ouvrir Palma">
+                <img src="assets/commerce-electronique.webp" alt="Aperçu de la boutique Palma" style="object-position: left center;" width="880" height="400" loading="lazy" decoding="async">
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-live">En ligne</span><span>Web · E-commerce</span></div>
+                <h3>Palma</h3>
+                <p>Boutique en ligne avec catalogue de produits et panier d'achat.</p>
+                <ul class="tech-list">
+                  <li>Node.js</li><li>MongoDB</li><li>JavaScript</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://palma-eta.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary flex-fill">Voir la boutique</a>
+                  <a href="https://github.com/Tahe-clark/palma" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Code source de Palma sur GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Tableau de bord Black Friday -->
+          <div class="col project-item reveal" data-category="web">
+            <article class="project-card h-100">
+              <a class="project-cover" href="https://black-friday-electronics-dashboard.vercel.app/" target="_blank" rel="noopener" aria-label="Ouvrir le tableau de bord Black Friday">
+                <img src="assets/analyse-bi.webp" alt="Aperçu du tableau de bord Black Friday" width="1200" height="737" loading="lazy" decoding="async">
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-live">En ligne</span><span>Données · Visualisation</span></div>
+                <h3>Tableau de bord Black Friday</h3>
+                <p>Analyse des ventes d'électronique pendant le Black Friday, présentée sous forme de tableau de bord pour aider à la prise de décision.</p>
+                <ul class="tech-list">
+                  <li>Python</li><li>Tableau</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://black-friday-electronics-dashboard.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary flex-fill">Voir l'analyse</a>
+                  <a href="https://github.com/Tahe-clark/black-friday-electronics-dashboard" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Code source du tableau de bord sur GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Memorizz -->
+          <div class="col project-item reveal" data-category="web">
+            <article class="project-card h-100">
+              <a class="project-cover" href="https://memorizz-three.vercel.app/" target="_blank" rel="noopener" aria-label="Jouer à Memorizz">
+                <img src="assets/jeu-de-memoire.webp" alt="Aperçu du jeu Memorizz" width="900" height="580" loading="lazy" decoding="async">
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-live">En ligne</span><span>Web · Jeu</span></div>
+                <h3>Memorizz</h3>
+                <p>Jeu de mémoire dans le navigateur pour tester et entraîner ses capacités cognitives.</p>
+                <ul class="tech-list">
+                  <li>JavaScript</li><li>HTML / CSS</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://memorizz-three.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary flex-fill">Jouer</a>
+                  <a href="https://github.com/Tahe-clark/memorizz" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Code source de Memorizz sur GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- uTaste -->
+          <div class="col project-item reveal" data-category="mobile">
+            <article class="project-card h-100">
+              <div class="project-cover cover-icon cover-mobile" aria-hidden="true">
+                <i class="bi bi-phone-fill"></i>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-done">Terminé</span><span>Mobile · Android</span></div>
+                <h3>uTaste</h3>
+                <p>Application Android pour consulter les informations nutritionnelles des aliments grâce à l'API OpenFoodFacts, avec stockage local.</p>
+                <ul class="tech-list">
+                  <li>Android</li><li>SQLite</li><li>API REST</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- Afrimyst -->
+          <div class="col project-item reveal" data-category="mobile">
+            <article class="project-card h-100">
+              <div class="project-cover cover-icon cover-game" aria-hidden="true">
+                <i class="bi bi-controller"></i>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-done">Terminé</span><span>Jeu vidéo</span></div>
+                <h3>Afrimyst</h3>
+                <p>Jeu vidéo développé en Python, dont l'interface et les écrans ont d'abord été maquettés dans Figma.</p>
+                <ul class="tech-list">
+                  <li>Python</li><li>Pygame</li><li>Figma</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- Systèmes et qualité -->
+          <div class="col project-item reveal" data-category="systems">
+            <article class="project-card h-100">
+              <div class="project-cover cover-icon cover-systems" aria-hidden="true">
+                <i class="bi bi-terminal-fill"></i>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-done">Cours</span><span>Systèmes · Tests</span></div>
+                <h3>Systèmes et qualité logicielle</h3>
+                <ul class="project-points">
+                  <li>Chaîne de processus en C avec <code>fork</code>, <code>execvp</code> et des pipes (Linux).</li>
+                  <li>Synchronisation de threads en Java avec verrous et sémaphores.</li>
+                  <li>Tests JUnit : couverture de branches, tests par états, rapport JaCoCo.</li>
+                </ul>
+                <ul class="tech-list">
+                  <li>C</li><li>Java</li><li>JUnit</li><li>JaCoCo</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- ── En cours ── -->
+        <h3 class="subsection-title text-center mt-5 mb-4 reveal">En cours de développement</h3>
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+
+          <!-- LALY -->
+          <div class="col reveal">
+            <article class="project-card project-card-wip h-100">
+              <div class="project-cover cover-icon cover-laly" aria-hidden="true">
+                <i class="bi bi-gem"></i>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-wip">En conception</span><span>E-commerce · Client réel</span></div>
+                <h3>LALY</h3>
+                <p>Boutique en ligne de chaînes et bijoux pour une marque basée à Abidjan : univers rose poudré et or, paiement mobile Wave en FCFA, catalogue produits, etc.</p>
+                <p class="project-highlight"><strong>Étape actuelle :</strong> identité visuelle et mode de paiement validés avec la cliente ; maquettes et architecture en cours.</p>
+                <ul class="tech-list">
+                  <li>Figma</li><li>Paiement Wave</li><li>Design responsive</li><li>etc.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- Site du photographe -->
+          <div class="col reveal">
+            <article class="project-card project-card-wip h-100">
+              <div class="project-cover cover-icon cover-photo" aria-hidden="true">
+                <i class="bi bi-camera-fill"></i>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-wip">En cours</span><span>Full-stack · Client réel</span></div>
+                <h3>Portfolio de photographe</h3>
+                <p>Site vitrine et de réservation pour un photographe en France : galerie, prise de rendez-vous et tableau de bord administrateur.</p>
+                <ul class="tech-list">
+                  <li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Tailwind CSS</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ CONTACT ═════════════ -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="row g-4 g-lg-5 align-items-center">
+
+            <!-- Accroche -->
+            <div class="col-lg-6">
+              <p class="contact-kicker">Contact</p>
+              <h2 class="contact-title">Vous avez un stage, un projet ou une idée&nbsp;?<br><span>Construisons-le ensemble.</span></h2>
+              <p class="contact-lead">
+                Je cherche un stage coop en développement logiciel. Si vous voulez quelqu'un
+                qui livre des applications qui fonctionnent, du design à la mise en ligne, parlons-en.
+              </p>
+              <ul class="contact-points">
+                <li><i class="bi bi-rocket-takeoff" aria-hidden="true"></i>Des projets réels, déployés et utilisés</li>
+                <li><i class="bi bi-layers" aria-hidden="true"></i>Du front-end au back-end et à la base de données</li>
+                <li><i class="bi bi-palette" aria-hidden="true"></i>Un vrai souci de l'expérience utilisateur</li>
+              </ul>
+            </div>
+
+            <!-- Actions -->
+            <div class="col-lg-6">
+              <div class="contact-card">
+                <p class="contact-card-label">Le plus rapide : un courriel</p>
+                <div class="email-row">
+                  <a href="mailto:ctahe033@uottawa.ca" class="email-link">ctahe033@uottawa.ca</a>
+                  <button type="button" class="copy-btn" id="copy-email" data-email="ctahe033@uottawa.ca" aria-label="Copier l'adresse courriel">
+                    <i class="bi bi-clipboard" aria-hidden="true"></i><span>Copier</span>
+                  </button>
+                </div>
+                <a href="mailto:ctahe033@uottawa.ca?subject=Opportunit%C3%A9%20de%20stage%20coop" class="btn btn-primary btn-lg w-100 mt-3">
+                  <i class="bi bi-send-fill me-2" aria-hidden="true"></i>M'écrire maintenant
+                </a>
+
+                <div class="contact-links">
+                  <a href="https://linkedin.com/in/clark-tahe" target="_blank" rel="noopener" class="contact-link">
+                    <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    <span><strong>LinkedIn</strong><small>Mon parcours</small></span>
+                    <i class="bi bi-arrow-up-right ms-auto" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://github.com/Tahe-clark" target="_blank" rel="noopener" class="contact-link">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <span><strong>GitHub</strong><small>Mon code</small></span>
+                    <i class="bi bi-arrow-up-right ms-auto" aria-hidden="true"></i>
+                  </a>
+                </div>
+
+                <p class="contact-location"><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i>Gatineau – Ottawa</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═════════════ FOOTER ═════════════ -->
   <footer class="py-4">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
           <span class="fw-bold text-primary">Kelyan Tahe</span>
-          <span class="text-muted ms-2">N'hésitez pas à me contacter !</span>
+          <span class="footer-note ms-2">© <span id="year">2026</span> · Gatineau, QC</span>
         </div>
         <div class="col-md-6 text-center text-md-end">
-          <a href="https://github.com/Tahe-clark" aria-label="GitHub de Kelyan Tahe" class="social-link me-3" target="_blank" rel="noopener">
-            <i class="bi bi-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/clark-tahe" aria-label="LinkedIn de Kelyan Tahe" class="social-link" target="_blank" rel="noopener">
-            <i class="bi bi-linkedin"></i>
-          </a>
+          <a href="https://github.com/Tahe-clark" aria-label="GitHub de Kelyan Tahe" class="social-link me-3" target="_blank" rel="noopener"><i class="bi bi-github" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/clark-tahe" aria-label="LinkedIn de Kelyan Tahe" class="social-link me-3" target="_blank" rel="noopener"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="mailto:ctahe033@uottawa.ca" aria-label="Courriel de Kelyan Tahe" class="social-link"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
-
-
-
-<!-- ── Bootstrap JS ── -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  <!-- ── Bootstrap JS ── -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- ── Mon JS ── -->
+  <script src="js/main.js"></script>
 </body>
 </html>

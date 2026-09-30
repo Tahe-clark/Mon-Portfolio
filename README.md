@@ -4,20 +4,24 @@ Portfolio personnel d'un étudiant en génie logiciel (programme coop) à l'Univ
 
 🔗 **Site en ligne :** https://mon-portfolio-six-xi-67.vercel.app
 
-## Aperçu
+## Projets présentés
 
-Site vitrine d'une page qui présente mon parcours, ma façon de travailler et une sélection de projets :
-
-| Projet | Description | Technologies |
-|---|---|---|
-| [Docteur Cheveux](https://docteur-cheveux.vercel.app/) | Prototype de diagnostic et de prise de rendez-vous pour soins capillaires | React, Bootstrap, JavaScript |
-| [Jeu de mémoire](https://memorizz-three.vercel.app/) | Jeu web pour tester ses capacités cognitives | JavaScript, HTML/CSS |
-| [E-commerce](https://palma-eta.vercel.app/) | Boutique en ligne avec panier d'achat | Node.js, MongoDB |
-| [Analyse / BI](https://black-friday-electronics-dashboard.vercel.app/) | Tableau de bord d'analyse des ventes Black Friday | Python, Tableau |
+| Projet | Description | Technologies | Liens |
+|---|---|---|---|
+| Sentinel | Surveillance vidéo à distance en temps réel | React, TypeScript, Django Channels, PostgreSQL, WebRTC | [Site](https://sentinel-web-snowy.vercel.app/) · [Code](https://github.com/Tahe-clark/Sentinel) |
+| VoteBal | Vote en ligne pour le bal d'une école (Côte d'Ivoire) | Next.js, TypeScript, Supabase, Tailwind | [Site](https://prom-vote-platform.vercel.app/vote) · [Code](https://github.com/Tahe-clark/prom-vote-platform) |
+| Docteur Cheveux | Diagnostic capillaire et prise de rendez-vous | React, Bootstrap | [Site](https://docteur-cheveux.vercel.app/) · [Code](https://github.com/Tahe-clark/docteur-cheveux) |
+| Palma | Boutique en ligne avec panier | Node.js, MongoDB | [Site](https://palma-eta.vercel.app/) · [Code](https://github.com/Tahe-clark/palma) |
+| Tableau de bord Black Friday | Analyse des ventes d'électronique | Python, Tableau | [Site](https://black-friday-electronics-dashboard.vercel.app/) · [Code](https://github.com/Tahe-clark/black-friday-electronics-dashboard) |
+| Memorizz | Jeu de mémoire | JavaScript | [Site](https://memorizz-three.vercel.app/) · [Code](https://github.com/Tahe-clark/memorizz) |
+| uTaste | Application Android nutritionnelle | Android, SQLite, OpenFoodFacts | — |
+| Afrimyst | Jeu vidéo | Python, Pygame, Figma | — |
+| Portfolio de photographe | Site vitrine et réservation *(en cours)* | Next.js, Supabase, Tailwind | — |
+| LALY | Boutique de bijoux à Abidjan *(en conception)* | Figma | — |
 
 ## Technologies du portfolio
 
-- HTML5 / CSS3
+- HTML5 / CSS3, JavaScript (filtres de projets, navigation)
 - [Bootstrap 5](https://getbootstrap.com/) et Bootstrap Icons
 - Google Fonts (Playfair Display, Inder)
 - Déploiement sur [Vercel](https://vercel.com/)
@@ -26,14 +30,14 @@ Site vitrine d'une page qui présente mon parcours, ma façon de travailler et u
 
 ```
 ├── index.html      # Page principale
-├── css/style.css   # Styles personnalisés
-└── assets/         # Images (photo, aperçus de projets)
+├── css/style.css   # Styles (thème, cartes responsives, accessibilité)
+├── js/main.js      # Filtres des projets, navbar
+└── assets/         # Photo et aperçus des projets
 ```
 
 ## Lancer en local
 
-Aucune installation requise : ouvrir `index.html` dans un navigateur,
-ou utiliser l'extension *Live Server* de VS Code.
+Ouvrir `index.html` dans un navigateur, ou utiliser l'extension *Live Server* de VS Code.
 
 ## Contact
 
