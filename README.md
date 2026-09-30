@@ -1,4 +1,4 @@
-# Portfolio — Kelyan Tahe
+# Portfolio — Kelyan Clark Tahe
 
 Portfolio personnel d'un étudiant en génie logiciel (programme coop) à l'Université d'Ottawa.
 

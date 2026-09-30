@@ -105,6 +105,10 @@ button:focus-visible {
   color: #fff;
 }
 
+/* Halo de focus aux couleurs du site (au lieu du bleu de Bootstrap) */
+.btn:focus,
+.btn.show { box-shadow: 0 0 0 0.2rem rgba(242, 132, 92, 0.35) !important; }
+
 /* Bouton discret (icône GitHub des projets) */
 .btn-ghost {
   border: 1px solid var(--color-border);
@@ -167,8 +171,32 @@ code {
 .nav-link:hover,
 .nav-link.active { color: var(--color-primary) !important; }
 
+@media (max-width: 400px) { .navbar-brand { font-size: 1.1rem; } }
+
+/* Sélecteur de langue FR / EN */
+.lang-switch {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.lang-btn {
+  border: 0;
+  background: transparent;
+  color: var(--color-text-soft);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  transition: background-color var(--transition), color var(--transition);
+}
+.lang-btn:hover { color: var(--color-primary); }
+.lang-btn.active { background: var(--color-primary); color: var(--color-dark); }
+
 .navbar-toggler { border-color: rgba(255, 255, 255, 0.2); }
-.navbar-toggler-icon { filter: invert(1) brightness(0.8); }
+.navbar-toggler-icon { opacity: 0.85; }   /* icône blanche fournie par .navbar-dark */
 
 /* ═══════════ 5. HÉRO (identique à la version d'origine) ═══════════ */
 #hero {
@@ -198,18 +226,18 @@ code {
   100% { transform: translateY(0px); }
 }
 
-/* Étiquette « stage coop » aux couleurs du site */
+/* Étiquette « stage coop » : sans contour, étoiles de chaque côté */
 .hero-tag {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem 0.95rem;
-  border: 1px solid rgba(242, 132, 92, 0.45);
+  gap: 0.55rem;
+  padding: 0.35rem 1rem;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--color-primary);
-  background: rgba(242, 132, 92, 0.08);
+  background: rgba(242, 132, 92, 0.1);
 }
+.hero-tag .bi-stars:last-child { transform: scaleX(-1); }   /* étoiles en miroir à la fin */
 
 /* ═══════════ 6. SECTIONS ═══════════ */
 .py-section { padding: var(--section-padding); }
@@ -333,11 +361,14 @@ code {
 }
 .project-feature:hover .feature-media img { transform: scale(1.04); }
 
-/* Illustrations : affichées en entier, fond assorti pour combler l'espace */
-.media-sentinel { background: radial-gradient(circle at 30% 25%, #34405C 0%, #171C2A 60%, #0E1119 100%); }
-.media-votebal  { background: radial-gradient(circle at 50% 20%, #7A5A28 0%, #2E2012 55%, #150E08 100%); }
-.media-sentinel img,
-.media-votebal img { object-fit: contain; }
+/* Sur ordinateur, c'est le texte qui fixe la hauteur : l'image remplit la case */
+@media (min-width: 992px) {
+  .feature-media { position: relative; }
+  .feature-media img { position: absolute; inset: 0; }
+}
+
+/* Photo verticale (VoteBal) : cadrée sur la couronne et l'affiche */
+.media-portrait img { object-position: center 30%; }
 
 .feature-body {
   display: flex;
@@ -353,6 +384,29 @@ code {
 }
 .feature-body p { font-size: 1.05rem; }
 .feature-body .tech-list { margin-bottom: 1.75rem; }
+
+/* ── Menu déroulant « Voir le projet » (VoteBal) ── */
+.project-dropdown {
+  background: #2A1D1E;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 0.4rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+.project-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.5rem;
+  color: var(--color-text);
+  white-space: normal;
+}
+.project-dropdown .dropdown-item > i { font-size: 1.3rem; color: var(--color-primary); }
+.project-dropdown .dropdown-item span { display: flex; flex-direction: column; line-height: 1.3; }
+.project-dropdown .dropdown-item small { color: var(--color-text-soft); }
+.project-dropdown .dropdown-item:hover,
+.project-dropdown .dropdown-item:focus { background: rgba(242, 132, 92, 0.14); color: var(--color-heading); }
 
 /* ── Filtres ── */
 .filter-btn {

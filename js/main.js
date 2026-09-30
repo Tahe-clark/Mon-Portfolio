@@ -1,5 +1,6 @@
 /* ══════════════════════════════════════════════
    Portfolio — Kelyan Tahe
+   0. Langue FR / EN
    1. Apparition des sections au défilement
    2. Filtres des projets
    3. Navbar : ombre au défilement + fermeture du menu mobile
@@ -7,6 +8,62 @@
    5. Année automatique dans le footer
 ══════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
+
+  /* ── 0. Langue FR / EN ──
+     Le français est dans le HTML ; l'anglais vient de js/i18n.js.
+     Au chargement, on mémorise le français pour pouvoir y revenir. */
+  const EN = window.I18N_EN || {};
+  const FR_EXTRA = { 'contact.copied': 'Copié !' };   // textes utilisés seulement en JS
+  const frText = new Map();
+  const frAttr = new Map();
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => frText.set(el, el.innerHTML));
+  document.querySelectorAll('[data-i18n-attr]').forEach((el) => {
+    const saved = {};
+    el.dataset.i18nAttr.split(';').forEach((pair) => {
+      const [attr] = pair.split(':');
+      saved[attr] = el.getAttribute(attr);
+    });
+    frAttr.set(el, saved);
+  });
+
+  let currentLang = 'fr';
+  const t = (key) => (currentLang === 'en' ? EN[key] : FR_EXTRA[key]) || FR_EXTRA[key] || key;
+
+  const setLang = (lang) => {
+    currentLang = lang === 'en' ? 'en' : 'fr';
+    document.documentElement.lang = currentLang;
+
+    frText.forEach((fr, el) => {
+      const key = el.dataset.i18n;
+      el.innerHTML = currentLang === 'en' && EN[key] ? EN[key] : fr;
+    });
+    frAttr.forEach((saved, el) => {
+      el.dataset.i18nAttr.split(';').forEach((pair) => {
+        const [attr, key] = pair.split(':');
+        el.setAttribute(attr, currentLang === 'en' && EN[key] ? EN[key] : saved[attr]);
+      });
+    });
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      const on = btn.dataset.lang === currentLang;
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+
+    try { localStorage.setItem('lang', currentLang); } catch (e) { /* navigation privée */ }
+  };
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => setLang(btn.dataset.lang));
+  });
+
+  // Langue de départ : choix précédent, sinon langue du navigateur, sinon français
+  let startLang = null;
+  try { startLang = localStorage.getItem('lang'); } catch (e) { /* ignore */ }
+  if (!startLang) startLang = (navigator.language || '').toLowerCase().startsWith('en') ? 'en' : 'fr';
+  if (startLang === 'en') setLang('en');
+
 
   /* ── 1. Apparition au défilement ──
      IntersectionObserver ne fait aucun calcul pendant le défilement :
@@ -43,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
       });
       items.forEach((item) => {
-        const match = filter === 'all' || item.dataset.category === filter;
+        const match = filter === 'all' || item.dataset.category.split(' ').includes(filter);
         item.classList.toggle('is-hidden', !match);
         if (match) item.classList.add('is-visible');
       });
@@ -81,11 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
     copyBtn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(copyBtn.dataset.email);
+        const label = copyBtn.querySelector('[data-i18n]');
+        const icon  = copyBtn.querySelector('i');
         copyBtn.classList.add('copied');
-        copyBtn.innerHTML = '<i class="bi bi-check2" aria-hidden="true"></i><span>Copié !</span>';
+        icon.className = 'bi bi-check2';
+        label.textContent = t('contact.copied');
         setTimeout(() => {
           copyBtn.classList.remove('copied');
-          copyBtn.innerHTML = '<i class="bi bi-clipboard" aria-hidden="true"></i><span>Copier</span>';
+          icon.className = 'bi bi-clipboard';
+          label.innerHTML = currentLang === 'en' ? EN['contact.copy'] : frText.get(label);
         }, 2000);
       } catch (e) { /* le lien mailto reste disponible */ }
     });
