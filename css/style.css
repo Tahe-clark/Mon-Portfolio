@@ -470,6 +470,7 @@ code {
 
 .cover-mobile  { background: radial-gradient(circle at 30% 30%, #2F6B55 0%, #0F241C 75%); }
 .cover-game    { background: radial-gradient(circle at 30% 30%, #6B3B63 0%, #221220 75%); }
+.cover-swift   { background: radial-gradient(circle at 30% 30%, #B5532E 0%, #4A2416 55%, #1C100C 95%); }
 .cover-systems { background: radial-gradient(circle at 30% 30%, #3F4A3A 0%, #141812 75%); }
 .cover-laly    { background: radial-gradient(circle at 30% 30%, #D8AFA7 0%, #7A4F4A 45%, #2A1A1A 90%); color: #F6E3B4; }
 .cover-photo   { background: radial-gradient(circle at 30% 30%, #7A4A3A 0%, #261A1B 75%); }

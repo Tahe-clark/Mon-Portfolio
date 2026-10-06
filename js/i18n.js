@@ -125,6 +125,14 @@ window.I18N_EN = {
   'p.afri.cat': 'Video game',
   'p.afri.desc': 'Video game built in Python, with its interface and screens first designed as mockups in Figma.',
 
+  'p.dep.open': 'View the DepCache code',
+  'p.dep.cat': 'Systems · Command-line tool',
+  'p.dep.desc': 'Swift command-line tool exploring two ideas at the heart of build systems: dependency build order and caching.',
+  'p.dep.how': '<strong>How:</strong> topological sort (Kahn\'s algorithm) to find a valid build order, then input hashing to skip unnecessary rebuilds.',
+  'p.dep.t1': 'Graphs',
+  'p.dep.t2': 'Hashing',
+  'btn.code': 'View the code',
+
   'p.sys.cat': 'Systems · Testing',
   'p.sys.title': 'Systems & software quality',
   'p.sys.1': 'Process chain in C using <code>fork</code>, <code>execvp</code> and pipes (Linux).',
