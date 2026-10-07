@@ -114,11 +114,15 @@ window.I18N_EN = {
   'p.bf.code': 'Dashboard source code on GitHub',
 
   'p.mem.open': 'Play Memorizz',
-  'p.mem.alt': 'Preview of the Memorizz game',
-  'p.mem.cat': 'Web · Game',
-  'p.mem.desc': 'Browser memory game to test and train your cognitive skills.',
+  'p.mem.alt': "Two Memorizz avatars facing off in Battle mode",
+  'p.mem.cat': 'Featured · Web game',
+  'p.mem.desc': 'Bilingual memory games in the browser: memorize a sequence, solve the math, then take on a friend or the computer in a 2D or 3D boxing match.',
+  'p.mem.challenge': '<strong>Challenge:</strong> syncing the whole fight to the beat of the music and building the 3D ring in pure CSS, with no library.',
   'p.mem.btn': 'Play',
   'p.mem.code': 'Memorizz source code on GitHub',
+  'btn.video': 'Video',
+  'video.langAria': 'Video language',
+  'video.close': 'Close',
 
   'p.utaste.desc': 'Android app to look up food nutrition information using the OpenFoodFacts API, with local storage.',
 
@@ -126,7 +130,7 @@ window.I18N_EN = {
   'p.afri.desc': 'Video game built in Python, with its interface and screens first designed as mockups in Figma.',
 
   'p.dep.open': 'View the DepCache code',
-  'p.dep.cat': 'Systems · Command-line tool',
+  'p.dep.cat': 'Systems · Swift',
   'p.dep.desc': 'Swift command-line tool exploring two ideas at the heart of build systems: dependency build order and caching.',
   'p.dep.how': '<strong>How:</strong> topological sort (Kahn\'s algorithm) to find a valid build order, then input hashing to skip unnecessary rebuilds.',
   'p.dep.t1': 'Graphs',

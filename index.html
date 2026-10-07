@@ -258,7 +258,7 @@
         <!-- ── Projets phares (grand format) ── -->
 
         <!-- Sentinel -->
-        <article class="project-feature mb-5 reveal">
+        <article class="project-feature mb-4 reveal">
           <div class="row g-0">
             <div class="col-lg-7">
               <a class="feature-media" href="https://sentinel-web-snowy.vercel.app/" target="_blank" rel="noopener" aria-label="Ouvrir Sentinel" data-i18n-attr="aria-label:p.sentinel.open">
@@ -275,23 +275,55 @@
                   <li>React</li><li>TypeScript</li><li>Django Channels</li><li>PostgreSQL</li><li>WebRTC</li>
                 </ul>
                 <div class="project-links">
-                  <a href="https://sentinel-web-snowy.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-lg flex-fill" data-i18n="btn.view">Voir le projet</a>
-                  <a href="https://github.com/Tahe-clark/Sentinel" target="_blank" rel="noopener" class="btn btn-ghost btn-lg" aria-label="Code source de Sentinel sur GitHub" data-i18n-attr="aria-label:p.sentinel.code"><i class="bi bi-github" aria-hidden="true"></i></a>
+                  <a href="https://sentinel-web-snowy.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary flex-fill" data-i18n="btn.view">Voir le projet</a>
+                  <button type="button" class="btn btn-ghost video-btn" data-video-title="Sentinel" data-video-fr="assets/videos/sentinel-fr.mp4" data-video-en="assets/videos/sentinel-en.mp4">
+                    <i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i><span data-i18n="btn.video">Vidéo</span>
+                  </button>
+                  <a href="https://github.com/Tahe-clark/Sentinel" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Code source de Sentinel sur GitHub" data-i18n-attr="aria-label:p.sentinel.code"><i class="bi bi-github" aria-hidden="true"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- VoteBal (image à droite sur ordinateur) -->
-        <article class="project-feature mb-5 reveal">
+        <!-- Memorizz (image à droite sur ordinateur) -->
+        <article class="project-feature mb-4 reveal">
           <div class="row g-0">
             <div class="col-lg-7 order-lg-2">
+              <a class="feature-media" href="https://memorizz-three.vercel.app/" target="_blank" rel="noopener" aria-label="Jouer à Memorizz" data-i18n-attr="aria-label:p.mem.open">
+                <img src="assets/memorizz-battle.webp" alt="Deux avatars de Memorizz face à face en mode Battle" data-i18n-attr="alt:p.mem.alt" width="1280" height="480" loading="lazy" decoding="async">
+              </a>
+            </div>
+            <div class="col-lg-5 order-lg-1">
+              <div class="feature-body">
+                <div class="project-meta"><span class="status status-live" data-i18n="status.live">En ligne</span><span data-i18n="p.mem.cat">Projet phare · Jeu web</span></div>
+                <h3 class="feature-title">Mem'orizz</h3>
+                <p data-i18n="p.mem.desc">Jeux de mémoire bilingues dans le navigateur : mémorise une séquence, résous les calculs, puis affronte un ami ou l'ordinateur dans un combat de boxe en 2D ou en 3D.</p>
+                <p class="project-highlight" data-i18n="p.mem.challenge"><strong>Défi :</strong> caler tout le combat sur le tempo de la musique et construire le ring 3D uniquement en CSS, sans bibliothèque.</p>
+                <ul class="tech-list">
+                  <li>React</li><li>Vite</li><li>JavaScript</li><li>CSS 3D</li><li>Web Audio</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://memorizz-three.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary flex-fill" data-i18n="p.mem.btn">Jouer</a>
+                  <button type="button" class="btn btn-ghost video-btn" data-video-title="Mem'orizz" data-video-fr="assets/videos/memorizz-fr.mp4" data-video-en="assets/videos/memorizz-en.mp4">
+                    <i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i><span data-i18n="btn.video">Vidéo</span>
+                  </button>
+                  <a href="https://github.com/Tahe-clark/memorizz" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Code source de Memorizz sur GitHub" data-i18n-attr="aria-label:p.mem.code"><i class="bi bi-github" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- VoteBal -->
+        <article class="project-feature mb-4 reveal">
+          <div class="row g-0">
+            <div class="col-lg-7">
               <a class="feature-media media-portrait" href="https://prom-vote-platform.vercel.app/vote" target="_blank" rel="noopener" aria-label="Ouvrir VoteBal" data-i18n-attr="aria-label:p.vote.open">
                 <img src="assets/votebal-urne.webp" alt="Urne de vote dorée pour élire le roi et la reine du bal" data-i18n-attr="alt:p.vote.alt" width="1000" height="1333" loading="lazy" decoding="async">
               </a>
             </div>
-            <div class="col-lg-5 order-lg-1">
+            <div class="col-lg-5">
               <div class="feature-body">
                 <div class="project-meta"><span class="status status-live" data-i18n="status.live">En ligne</span><span data-i18n="p.vote.cat">Projet phare · Client réel</span></div>
                 <h3 class="feature-title">VoteBal</h3>
@@ -303,7 +335,7 @@
                 <div class="project-links">
                   <!-- Menu à 2 choix : site de vote ou espace administrateur -->
                   <div class="dropdown flex-fill">
-                    <button class="btn btn-primary btn-lg w-100 dropdown-toggle" type="button" id="votebal-menu" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-primary w-100 dropdown-toggle" type="button" id="votebal-menu" data-bs-toggle="dropdown" aria-expanded="false">
                       <span data-i18n="btn.view">Voir le projet</span>
                     </button>
                     <ul class="dropdown-menu project-dropdown w-100" aria-labelledby="votebal-menu">
@@ -321,7 +353,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="https://github.com/Tahe-clark/prom-vote-platform" target="_blank" rel="noopener" class="btn btn-ghost btn-lg" aria-label="Code source de VoteBal sur GitHub" data-i18n-attr="aria-label:p.vote.code"><i class="bi bi-github" aria-hidden="true"></i></a>
+                  <a href="https://github.com/Tahe-clark/prom-vote-platform" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Code source de VoteBal sur GitHub" data-i18n-attr="aria-label:p.vote.code"><i class="bi bi-github" aria-hidden="true"></i></a>
                 </div>
               </div>
             </div>
@@ -404,27 +436,6 @@
             </article>
           </div>
 
-          <!-- Memorizz (apparaît dans « Web et UX » et « Mobile et jeux ») -->
-          <div class="col project-item reveal" data-category="web mobile">
-            <article class="project-card h-100">
-              <a class="project-cover" href="https://memorizz-three.vercel.app/" target="_blank" rel="noopener" aria-label="Jouer à Memorizz" data-i18n-attr="aria-label:p.mem.open">
-                <img src="assets/jeu-de-memoire.webp" alt="Aperçu du jeu Memorizz" data-i18n-attr="alt:p.mem.alt" width="900" height="580" loading="lazy" decoding="async">
-              </a>
-              <div class="project-body">
-                <div class="project-meta"><span class="status status-live" data-i18n="status.live">En ligne</span><span data-i18n="p.mem.cat">Web · Jeu</span></div>
-                <h3>Memorizz</h3>
-                <p data-i18n="p.mem.desc">Jeu de mémoire dans le navigateur pour tester et entraîner ses capacités cognitives.</p>
-                <ul class="tech-list">
-                  <li>JavaScript</li><li>HTML / CSS</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://memorizz-three.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary flex-fill" data-i18n="p.mem.btn">Jouer</a>
-                  <a href="https://github.com/Tahe-clark/memorizz" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="Code source de Memorizz sur GitHub" data-i18n-attr="aria-label:p.mem.code"><i class="bi bi-github" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </article>
-          </div>
-
           <!-- uTaste -->
           <div class="col project-item reveal" data-category="mobile">
             <article class="project-card h-100">
@@ -466,7 +477,7 @@
                 <i class="bi bi-diagram-3-fill" aria-hidden="true"></i>
               </a>
               <div class="project-body">
-                <div class="project-meta"><span class="status status-done" data-i18n="status.done">Terminé</span><span data-i18n="p.dep.cat">Systèmes · Outil en ligne de commande</span></div>
+                <div class="project-meta"><span class="status status-done" data-i18n="status.done">Terminé</span><span data-i18n="p.dep.cat">Systèmes · Swift</span></div>
                 <h3>DepCache</h3>
                 <p data-i18n="p.dep.desc">Outil en ligne de commande en Swift qui explore deux idées au cœur des systèmes de build : l'ordre de compilation des dépendances et la mise en cache.</p>
                 <p class="project-highlight" data-i18n="p.dep.how"><strong>Comment :</strong> tri topologique (algorithme de Kahn) pour trouver un ordre de build valide, puis hachage des entrées pour sauter les recompilations inutiles.</p>
@@ -621,6 +632,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- ═════════════ FENÊTRE VIDÉO ═════════════ -->
+  <div class="modal fade" id="video-modal" tabindex="-1" aria-labelledby="video-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content video-modal">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="video-modal-title">Vidéo</h2>
+          <div class="lang-switch ms-auto me-3" role="group" aria-label="Langue de la vidéo" data-i18n-attr="aria-label:video.langAria">
+            <button type="button" class="lang-btn video-lang active" data-vlang="fr" aria-pressed="true">FR</button>
+            <button type="button" class="lang-btn video-lang" data-vlang="en" aria-pressed="false">EN</button>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer" data-i18n-attr="aria-label:video.close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <video id="video-player" controls playsinline preload="none"></video>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── Bootstrap JS ── -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

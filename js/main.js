@@ -5,7 +5,8 @@
    2. Filtres des projets
    3. Navbar : ombre au défilement + fermeture du menu mobile
    4. Copier l'adresse courriel
-   5. Année automatique dans le footer
+   5. Vidéos des projets (FR / EN)
+   6. Année automatique dans le footer
 ══════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    document.querySelectorAll('.lang-btn').forEach((btn) => {
+    document.querySelectorAll('.lang-btn[data-lang]').forEach((btn) => {
       const on = btn.dataset.lang === currentLang;
       btn.classList.toggle('active', on);
       btn.setAttribute('aria-pressed', on ? 'true' : 'false');
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try { localStorage.setItem('lang', currentLang); } catch (e) { /* navigation privée */ }
   };
 
-  document.querySelectorAll('.lang-btn').forEach((btn) => {
+  document.querySelectorAll('.lang-btn[data-lang]').forEach((btn) => {
     btn.addEventListener('click', () => setLang(btn.dataset.lang));
   });
 
@@ -154,7 +155,45 @@ document.addEventListener('DOMContentLoaded', () => {
     copyBtn.hidden = true;
   }
 
-  /* ── 5. Année ── */
+  /* ── 5. Vidéos des projets (FR / EN) ── */
+  const videoModalEl = document.getElementById('video-modal');
+  const player = document.getElementById('video-player');
+  if (videoModalEl && player && window.bootstrap) {
+    const videoModal = new bootstrap.Modal(videoModalEl);
+    let sources = { fr: '', en: '' };
+
+    const playIn = (lang) => {
+      player.src = sources[lang] || sources.fr;
+      videoModalEl.querySelectorAll('.video-lang').forEach((b) => {
+        const on = b.dataset.vlang === lang;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      player.play().catch(() => { /* lecture auto refusée : l'usager appuie sur lecture */ });
+    };
+
+    document.querySelectorAll('.video-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        sources = { fr: btn.dataset.videoFr, en: btn.dataset.videoEn };
+        document.getElementById('video-modal-title').textContent = btn.dataset.videoTitle;
+        videoModal.show();
+        playIn(currentLang);          // la vidéo démarre dans la langue du site
+      });
+    });
+
+    videoModalEl.querySelectorAll('.video-lang').forEach((b) => {
+      b.addEventListener('click', () => playIn(b.dataset.vlang));
+    });
+
+    // À la fermeture : on arrête la vidéo et on libère le fichier
+    videoModalEl.addEventListener('hidden.bs.modal', () => {
+      player.pause();
+      player.removeAttribute('src');
+      player.load();
+    });
+  }
+
+  /* ── 6. Année ── */
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 });

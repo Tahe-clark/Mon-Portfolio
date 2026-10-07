@@ -13,7 +13,7 @@ Portfolio personnel d'un étudiant en génie logiciel (programme coop) à l'Univ
 | Docteur Cheveux | Diagnostic capillaire et prise de rendez-vous | React, Bootstrap | [Site](https://docteur-cheveux.vercel.app/) · [Code](https://github.com/Tahe-clark/docteur-cheveux) |
 | Palma | Boutique en ligne avec panier | Node.js, MongoDB | [Site](https://palma-eta.vercel.app/) · [Code](https://github.com/Tahe-clark/palma) |
 | Tableau de bord Black Friday | Analyse des ventes d'électronique | Python, Tableau | [Site](https://black-friday-electronics-dashboard.vercel.app/) · [Code](https://github.com/Tahe-clark/black-friday-electronics-dashboard) |
-| Memorizz | Jeu de mémoire | JavaScript | [Site](https://memorizz-three.vercel.app/) · [Code](https://github.com/Tahe-clark/memorizz) |
+| Mem'orizz | Jeux de mémoire bilingues avec mode Battle 2D/3D | React, Vite, CSS 3D | [Site](https://memorizz-three.vercel.app/) · [Code](https://github.com/Tahe-clark/memorizz) |
 | DepCache | Résolution de dépendances et cache de build (CLI) | Swift | [Code](https://github.com/Tahe-clark/try-switch) |
 | uTaste | Application Android nutritionnelle | Android, SQLite, OpenFoodFacts | — |
 | Afrimyst | Jeu vidéo | Python, Pygame, Figma | — |
