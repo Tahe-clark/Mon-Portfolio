@@ -386,6 +386,34 @@ code {
 .feature-body .tech-list { margin-bottom: 1.25rem; }
 .feature-body .project-links { flex-wrap: wrap; }
 
+/* ── Identifiants de démo (VoteBal) ── */
+.demo-creds {
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px dashed rgba(242, 132, 92, 0.45);
+  border-radius: 0.75rem;
+  background: rgba(242, 132, 92, 0.06);
+}
+.demo-creds-title { font-size: 0.82rem !important; color: var(--color-primary) !important; margin-bottom: 0.4rem !important; font-weight: 700; }
+.demo-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; }
+.demo-row + .demo-row { margin-top: 0.3rem; }
+.demo-label { min-width: 6.5rem; color: var(--color-text-soft); }
+.demo-row code { font-size: 0.85rem; }
+.copy-chip {
+  margin-left: auto;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+  border-radius: 0.4rem;
+  padding: 0.1rem 0.45rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+@media (max-width: 575.98px) {
+  .demo-label { min-width: 5.2rem; font-size: 0.8rem; }
+  .demo-row code { font-size: 0.78rem; overflow-wrap: anywhere; }
+}
+.copy-chip:hover, .copy-chip.copied { border-color: var(--color-primary); color: var(--color-primary); }
+
 /* ── Fenêtre vidéo ── */
 .video-modal {
   background: var(--color-deep);
@@ -486,6 +514,7 @@ code {
 .cover-swift   { background: radial-gradient(circle at 30% 30%, #B5532E 0%, #4A2416 55%, #1C100C 95%); }
 .cover-systems { background: radial-gradient(circle at 30% 30%, #3F4A3A 0%, #141812 75%); }
 .cover-laly    { background: radial-gradient(circle at 30% 30%, #D8AFA7 0%, #7A4F4A 45%, #2A1A1A 90%); color: #F6E3B4; }
+.cover-salon   { background: radial-gradient(circle at 30% 30%, #6E4A3A 0%, #2B1D19 55%, #140E0C 100%); color: #F2C4A8; font-size: 5rem; }
 .cover-photo   { background: radial-gradient(circle at 30% 30%, #7A4A3A 0%, #261A1B 75%); }
 
 .project-body {

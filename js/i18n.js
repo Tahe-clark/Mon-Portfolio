@@ -15,7 +15,12 @@ window.I18N_EN = {
   'nav.projects': 'Projects',
   'nav.contact': 'Contact',
 
+  'cv.nav': 'My resume',
+  'cv.download': 'Download my resume (PDF)',
+  'cv.href': 'assets/cv/CV_Kelyan_Clark_Tahe_EN.pdf',
+
   /* Héro */
+  'hero.eyebrow': 'Software engineering · University of Ottawa',
   'hero.tag': 'Looking for a co-op internship',
   'hero.hello': "Hi, I'm",
   'hero.lead': 'Software engineering student at the University of Ottawa · Passionate about building websites and useful applications that make a real difference for users.',
@@ -25,7 +30,7 @@ window.I18N_EN = {
 
   /* À propos */
   'about.title': 'About me',
-  'about.p1': "I'm a software engineering student at the University of Ottawa, in the co-op program. I love building concrete applications that solve real problems: a real-time video monitoring platform, a voting system for a school, an online store for a jewelry brand.",
+  'about.p1': "I'm a software engineering student at the University of Ottawa, in the co-op program. I love building concrete applications that solve real problems: a real-time video monitoring platform, a voting system for a school, an online store for a jewelry brand, the website of the hair salon where I work.",
   'about.p2': "What sets me apart is the care I put into user experience: I want my tools to be as intuitive as they are solid. Outside of code, I draw, play the piano and I'm interested in video game development and robotics.",
   'social.email': 'Email Kelyan Clark Tahe',
 
@@ -114,7 +119,7 @@ window.I18N_EN = {
   'p.bf.code': 'Dashboard source code on GitHub',
 
   'p.mem.open': 'Play Memorizz',
-  'p.mem.alt': "Two Memorizz avatars facing off in Battle mode",
+  'p.mem.alt': 'Preview of the Memorizz game',
   'p.mem.cat': 'Featured · Web game',
   'p.mem.desc': 'Bilingual memory games in the browser: memorize a sequence, solve the math, then take on a friend or the computer in a 2D or 3D boxing match.',
   'p.mem.challenge': '<strong>Challenge:</strong> syncing the whole fight to the beat of the music and building the 3D ring in pure CSS, with no library.',
@@ -144,11 +149,26 @@ window.I18N_EN = {
   'p.sys.3': 'JUnit testing: branch coverage, state-based tests, JaCoCo report.',
 
   /* En cours */
+  'p.laly.open': 'Open the LALY store',
   'p.laly.cat': 'E-commerce · Real client',
-  'p.laly.desc': 'Online store for chains and jewelry for a brand based in Abidjan: a powder pink and gold look, Wave mobile payment in FCFA, product catalog, etc.',
-  'p.laly.step': '<strong>Current stage:</strong> visual identity and payment method approved with the client; mockups and architecture in progress.',
+  'p.laly.desc': 'Online store for chains and jewelry for a brand based in Abidjan: collections, catalog, product pages, Wave payment in FCFA and delivery within Abidjan.',
+  'p.laly.step': '<strong>Constraints:</strong> zero budget and a powder pink and gold look defined with the client.',
   'p.laly.t1': 'Wave payment',
   'p.laly.t2': 'Responsive design',
+  'status.v1': 'Live · V1',
+
+  'p.salon.open': 'Open the Salon G.Star website',
+  'p.salon.alt': 'Storefront of Salon G.Star in Gatineau',
+  'p.vote.demoTitle': 'Demo access to the admin area (read-only)',
+  'p.vote.demoUser': 'Username',
+  'p.vote.demoPass': 'Password',
+  'p.vote.copyUser': 'Copy username',
+  'p.vote.copyPass': 'Copy password',
+  'p.salon.cat': 'Featured · Real client',
+  'p.salon.desc': 'Bilingual showcase website for the hair salon where I work, in Gatineau: presentation, team, gallery of photos and videos, opening hours, map and one-tap calling.',
+  'p.salon.why': "<strong>Why:</strong> the salon had no online presence and its name didn't show up on Google Maps. I built the website and set up its Google Business Profile: the salon now shows up under its name on Google Maps.",
+  'p.salon.t1': 'Bilingual FR / EN',
+  'p.salon.btn': 'Visit the website',
 
   'p.photo.cat': 'Full-stack · Real client',
   'p.photo.title': 'Photographer portfolio',

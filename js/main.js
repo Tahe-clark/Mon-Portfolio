@@ -155,6 +155,20 @@ document.addEventListener('DOMContentLoaded', () => {
     copyBtn.hidden = true;
   }
 
+  /* ── 4b. Copier les identifiants de démo ── */
+  document.querySelectorAll('.copy-chip').forEach((chip) => {
+    if (!navigator.clipboard) { chip.hidden = true; return; }
+    chip.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(chip.dataset.copy);
+        const icon = chip.querySelector('i');
+        chip.classList.add('copied');
+        icon.className = 'bi bi-check2';
+        setTimeout(() => { chip.classList.remove('copied'); icon.className = 'bi bi-clipboard'; }, 1500);
+      } catch (e) { /* le texte reste visible pour être copié à la main */ }
+    });
+  });
+
   /* ── 5. Vidéos des projets (FR / EN) ── */
   const videoModalEl = document.getElementById('video-modal');
   const player = document.getElementById('video-player');

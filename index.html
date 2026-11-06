@@ -7,8 +7,8 @@
   <meta name="author" content="Kelyan Clark Tahe">
   <meta property="og:title" content="Kelyan Clark Tahe — Portfolio">
   <meta property="og:description" content="Étudiant en génie logiciel (coop) à l'Université d'Ottawa. Projets web full-stack, temps réel et UI/UX.">
-  <meta property="og:image" content="assets/maphoto.jpg">
-  <meta name="theme-color" content="#261A1B">
+  <meta property="og:image" content="assets/portrait.webp">
+  <meta name="theme-color" content="#0E1210">
 
   <title>Kelyan Clark Tahe — Portfolio</title>
 
@@ -21,10 +21,11 @@
   <!-- ── Google Fonts ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inder&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- ── Mon CSS ── -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme-classe.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -54,6 +55,11 @@
           <li class="nav-item"><a class="nav-link" href="#work" data-i18n="nav.work">Mon approche</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.projects">Projets</a></li>
           <li class="nav-item">
+            <a class="btn btn-primary btn-sm ms-lg-2 mt-2 mt-lg-0" href="assets/cv/CV_Kelyan_Clark_Tahe_FR.pdf" download data-i18n-attr="href:cv.href" target="_blank" rel="noopener">
+              <i class="bi bi-file-earmark-arrow-down-fill me-2" aria-hidden="true"></i><span data-i18n="cv.nav">Mon CV</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="btn btn-outline-primary btn-sm ms-lg-2 my-2 my-lg-0" href="#contact">
               <i class="bi bi-envelope-at-fill me-2" aria-hidden="true"></i><span data-i18n="nav.contact">Contact</span>
             </a>
@@ -66,34 +72,35 @@
   <main id="main">
 
     <!-- ═════════════ HÉRO (version d'origine) ═════════════ -->
-    <section id="hero" class="min-vh-100 d-flex align-items-center">
+    <section id="hero" class="hero-classe">
       <div class="container">
-        <div class="row align-items-center g-4 g-lg-5">
+        <div class="hero-grid">
 
           <!-- Texte de présentation -->
-          <div class="col-lg-7">
-            <span class="hero-tag mb-3">
-              <i class="bi bi-stars" aria-hidden="true"></i>
-              <span data-i18n="hero.tag">À la recherche d'un stage coop</span>
-              <i class="bi bi-stars" aria-hidden="true"></i>
-            </span>
-            <p class="text-primary fw-semibold mb-2" data-i18n="hero.hello">Salut, je suis</p>
-            <h1 class="display-3 fw-bold mb-3">Kelyan Clark Tahe</h1>
-            <p class="lead mb-4" data-i18n="hero.lead">
+          <div class="hero-copy">
+            <p class="hero-eyebrow"><span data-i18n="hero.eyebrow">Génie logiciel · Université d'Ottawa</span></p>
+            <h1 class="hero-name">Kelyan<br>Clark <em>Tahe</em></h1>
+            <p class="lead hero-lead" data-i18n="hero.lead">
               Étudiant en génie logiciel à l'Université d'Ottawa ·
               Passionné par la création de sites web et d'applications utiles qui impactent les utilisateurs.
             </p>
-            <div class="d-flex flex-wrap gap-3">
+            <div class="hero-actions">
               <a href="#projects" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Voir mes projets</a>
-              <a href="#about" class="btn btn-outline-light btn-lg" data-i18n="hero.cta2">En savoir plus</a>
+              <a href="#about" class="btn btn-quiet btn-lg" data-i18n="hero.cta2">En savoir plus</a>
             </div>
+            <p class="hero-tag">
+              <i class="bi bi-stars" aria-hidden="true"></i>
+              <span data-i18n="hero.tag">À la recherche d'un stage coop</span>
+              <i class="bi bi-stars" aria-hidden="true"></i>
+            </p>
           </div>
 
-          <!-- Ma photo -->
-          <div class="col-lg-5 text-center hero-floating">
-            <img src="assets/maphoto.jpg" alt="Photo de Kelyan Clark Tahe" data-i18n-attr="alt:hero.photo"
-                 class="img-fluid rounded-circle shadow hero-floating" style="max-width:320px">
-          </div>
+          <!-- Portrait -->
+          <figure class="hero-portrait">
+            <div class="portrait-frame">
+              <img src="assets/portrait.webp" alt="Photo de Kelyan Clark Tahe" data-i18n-attr="alt:hero.photo" width="900" height="1330">
+            </div>
+          </figure>
 
         </div>
       </div>
@@ -111,9 +118,9 @@
           <div class="col-lg-9 mx-auto text-center reveal">
             <p class="fs-5 mb-4" data-i18n="about.p1">
               Je suis étudiant en génie logiciel à l'Université d'Ottawa, dans le programme coop.
-              J'aime construire des applications concrètes qui règlent de vrais problèmes :
+              J'aime construire des applications concrètes qui résolvent de vrais problèmes :
               une plateforme de surveillance vidéo en temps réel, un système de vote pour une école,
-              une boutique en ligne pour une marque de bijoux.
+              une boutique en ligne pour une marque de bijoux, le site du salon de coiffure où je travaille.
             </p>
             <p class="fs-5 mb-4" data-i18n="about.p2">
               Ce qui me distingue, c'est le soin que je porte à l'expérience utilisateur :
@@ -202,7 +209,7 @@
               <div class="feature-icon mb-3"><i class="bi bi-pencil-square fs-1" aria-hidden="true"></i></div>
               <h3 class="h5 fw-bold" data-i18n="work.process.title">Mon processus</h3>
               <ol class="process-list">
-                <li data-i18n="work.process.1"><strong>Comprendre</strong> : qui est l'usager et quel problème il vit.</li>
+                <li data-i18n="work.process.1"><strong>Comprendre</strong> : qui est l'utilisateur et quel problème il vit.</li>
                 <li data-i18n="work.process.2"><strong>Esquisser</strong> : maquettes et parcours dans Figma.</li>
                 <li data-i18n="work.process.3"><strong>Construire</strong> : prototype fonctionnel, puis version déployée.</li>
                 <li data-i18n="work.process.4"><strong>Tester</strong> : tests, évaluation heuristique et itérations.</li>
@@ -315,15 +322,40 @@
           </div>
         </article>
 
-        <!-- VoteBal -->
+        <!-- Salon G.Star (image à gauche) -->
         <article class="project-feature mb-4 reveal">
           <div class="row g-0">
             <div class="col-lg-7">
+              <a class="feature-media" href="https://gstarsalon.vercel.app/fr" target="_blank" rel="noopener" aria-label="Ouvrir le site du Salon G.Star" data-i18n-attr="aria-label:p.salon.open">
+                <img src="assets/salon-gstar.webp" alt="Devanture du Salon G.Star à Gatineau" data-i18n-attr="alt:p.salon.alt" width="1300" height="996" loading="lazy" decoding="async">
+              </a>
+            </div>
+            <div class="col-lg-5">
+              <div class="feature-body">
+                <div class="project-meta"><span class="status status-live" data-i18n="status.live">En ligne</span><span data-i18n="p.salon.cat">Projet phare · Client réel</span></div>
+                <h3 class="feature-title">Salon G.Star</h3>
+                <p data-i18n="p.salon.desc">Site vitrine bilingue du salon de coiffure où je travaille, à Gatineau : présentation, équipe, galerie de réalisations en photos et vidéos, horaires, carte et appel en un clic.</p>
+                <p class="project-highlight" data-i18n="p.salon.why"><strong>Pourquoi :</strong> le salon n'avait aucune présence en ligne et son nom n'apparaissait pas sur Google Maps. J'ai créé le site et mis en place sa fiche Google : le salon apparaît maintenant sous son nom sur Google Maps.</p>
+                <ul class="tech-list">
+                  <li>Next.js</li><li data-i18n="p.salon.t1">Bilingue FR / EN</li><li>Vercel</li><li>Google Business Profile</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://gstarsalon.vercel.app/fr" target="_blank" rel="noopener" class="btn btn-primary flex-fill" data-i18n="p.salon.btn">Voir le site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- VoteBal (image à droite sur ordinateur) -->
+        <article class="project-feature mb-4 reveal">
+          <div class="row g-0">
+            <div class="col-lg-7 order-lg-2">
               <a class="feature-media media-portrait" href="https://prom-vote-platform.vercel.app/vote" target="_blank" rel="noopener" aria-label="Ouvrir VoteBal" data-i18n-attr="aria-label:p.vote.open">
                 <img src="assets/votebal-urne.webp" alt="Urne de vote dorée pour élire le roi et la reine du bal" data-i18n-attr="alt:p.vote.alt" width="1000" height="1333" loading="lazy" decoding="async">
               </a>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 order-lg-1">
               <div class="feature-body">
                 <div class="project-meta"><span class="status status-live" data-i18n="status.live">En ligne</span><span data-i18n="p.vote.cat">Projet phare · Client réel</span></div>
                 <h3 class="feature-title">VoteBal</h3>
@@ -332,6 +364,19 @@
                 <ul class="tech-list">
                   <li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Tailwind CSS</li>
                 </ul>
+                <div class="demo-creds">
+                  <p class="demo-creds-title"><i class="bi bi-shield-lock-fill me-2" aria-hidden="true"></i><span data-i18n="p.vote.demoTitle">Accès démo à l'espace admin (lecture seule)</span></p>
+                  <div class="demo-row">
+                    <span class="demo-label" data-i18n="p.vote.demoUser">Identifiant</span>
+                    <code>admindemo@gmail.com</code>
+                    <button type="button" class="copy-chip" data-copy="admindemo@gmail.com" aria-label="Copier l'identifiant" data-i18n-attr="aria-label:p.vote.copyUser"><i class="bi bi-clipboard" aria-hidden="true"></i></button>
+                  </div>
+                  <div class="demo-row">
+                    <span class="demo-label" data-i18n="p.vote.demoPass">Mot de passe</span>
+                    <code>qwerty12</code>
+                    <button type="button" class="copy-chip" data-copy="qwerty12" aria-label="Copier le mot de passe" data-i18n-attr="aria-label:p.vote.copyPass"><i class="bi bi-clipboard" aria-hidden="true"></i></button>
+                  </div>
+                </div>
                 <div class="project-links">
                   <!-- Menu à 2 choix : site de vote ou espace administrateur -->
                   <div class="dropdown flex-fill">
@@ -372,6 +417,27 @@
 
         <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3" id="project-grid">
 
+          <!-- LALY -->
+          <div class="col project-item reveal" data-category="web">
+            <article class="project-card h-100">
+              <a class="project-cover cover-icon cover-laly" href="https://laly-boutique.vercel.app/" target="_blank" rel="noopener" aria-label="Ouvrir la boutique LALY" data-i18n-attr="aria-label:p.laly.open">
+                <i class="bi bi-gem" aria-hidden="true"></i>
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="status status-live" data-i18n="status.v1">En ligne · V1</span><span data-i18n="p.laly.cat">E-commerce · Client réel</span></div>
+                <h3>LALY</h3>
+                <p data-i18n="p.laly.desc">Boutique en ligne de chaînes et bijoux pour une marque basée à Abidjan : collections, catalogue, fiches produits, paiement par Wave en FCFA et livraison à Abidjan.</p>
+                <p class="project-highlight" data-i18n="p.laly.step"><strong>Contraintes :</strong> budget zéro et un univers rose poudré et or défini avec la cliente.</p>
+                <ul class="tech-list">
+                  <li>Supabase</li><li data-i18n="p.laly.t1">Paiement Wave</li><li>Figma</li><li data-i18n="p.laly.t2">Design responsive</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://laly-boutique.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary flex-fill" data-i18n="p.palma.btn">Voir la boutique</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
           <!-- Docteur Cheveux -->
           <div class="col project-item reveal" data-category="web">
             <article class="project-card h-100">
@@ -382,7 +448,7 @@
                 <div class="project-meta"><span class="status status-live" data-i18n="status.live">En ligne</span><span>Web · UX</span></div>
                 <h3>Docteur Cheveux</h3>
                 <p data-i18n="p.dc.desc">Application web de diagnostic capillaire et de prise de rendez-vous pour un salon de coiffure.</p>
-                <p class="project-highlight" data-i18n="p.dc.approach"><strong>Démarche :</strong> prototype conçu selon une démarche centrée sur l'usager, dans le cadre du cours SEG3525.</p>
+                <p class="project-highlight" data-i18n="p.dc.approach"><strong>Démarche :</strong> prototype conçu selon une démarche centrée sur l'utilisateur, dans le cadre du cours SEG3525.</p>
                 <ul class="tech-list">
                   <li>React</li><li>JavaScript</li><li>Bootstrap</li>
                 </ul>
@@ -518,24 +584,6 @@
         <h3 class="subsection-title text-center mt-5 mb-4 reveal" data-i18n="projects.wip">En cours de développement</h3>
         <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
 
-          <!-- LALY -->
-          <div class="col reveal">
-            <article class="project-card project-card-wip h-100">
-              <div class="project-cover cover-icon cover-laly" aria-hidden="true">
-                <i class="bi bi-gem"></i>
-              </div>
-              <div class="project-body">
-                <div class="project-meta"><span class="status status-wip" data-i18n="status.design">En conception</span><span data-i18n="p.laly.cat">E-commerce · Client réel</span></div>
-                <h3>LALY</h3>
-                <p data-i18n="p.laly.desc">Boutique en ligne de chaînes et bijoux pour une marque basée à Abidjan : univers rose poudré et or, paiement mobile Wave en FCFA, catalogue produits, etc.</p>
-                <p class="project-highlight" data-i18n="p.laly.step"><strong>Étape actuelle :</strong> identité visuelle et mode de paiement validés avec la cliente ; maquettes et architecture en cours.</p>
-                <ul class="tech-list">
-                  <li>Figma</li><li data-i18n="p.laly.t1">Paiement Wave</li><li data-i18n="p.laly.t2">Design responsive</li><li>etc.</li>
-                </ul>
-              </div>
-            </article>
-          </div>
-
           <!-- Site du photographe -->
           <div class="col reveal">
             <article class="project-card project-card-wip h-100">
@@ -590,6 +638,10 @@
                 </div>
                 <a href="mailto:ctahe033@uottawa.ca?subject=Opportunit%C3%A9%20de%20stage%20coop" data-i18n-attr="href:contact.mailto" class="btn btn-primary btn-lg w-100 mt-3">
                   <i class="bi bi-send-fill me-2" aria-hidden="true"></i><span data-i18n="contact.write">M'écrire maintenant</span>
+                </a>
+
+                <a href="assets/cv/CV_Kelyan_Clark_Tahe_FR.pdf" download data-i18n-attr="href:cv.href" target="_blank" rel="noopener" class="btn btn-ghost btn-lg w-100 mt-2">
+                  <i class="bi bi-file-earmark-arrow-down-fill me-2" aria-hidden="true"></i><span data-i18n="cv.download">Télécharger mon CV (PDF)</span>
                 </a>
 
                 <div class="contact-links">

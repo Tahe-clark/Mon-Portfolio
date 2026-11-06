@@ -9,6 +9,7 @@ Portfolio personnel d'un étudiant en génie logiciel (programme coop) à l'Univ
 | Projet | Description | Technologies | Liens |
 |---|---|---|---|
 | Sentinel | Surveillance vidéo à distance en temps réel | React, TypeScript, Django Channels, PostgreSQL, WebRTC | [Site](https://sentinel-web-snowy.vercel.app/) · [Code](https://github.com/Tahe-clark/Sentinel) |
+| Salon G.Star | Site bilingue d'un salon de coiffure à Gatineau | Next.js, Vercel | [Site](https://gstarsalon.vercel.app/fr) |
 | VoteBal | Vote en ligne pour le bal d'une école (Côte d'Ivoire) | Next.js, TypeScript, Supabase, Tailwind | [Site](https://prom-vote-platform.vercel.app/vote) · [Code](https://github.com/Tahe-clark/prom-vote-platform) |
 | Docteur Cheveux | Diagnostic capillaire et prise de rendez-vous | React, Bootstrap | [Site](https://docteur-cheveux.vercel.app/) · [Code](https://github.com/Tahe-clark/docteur-cheveux) |
 | Palma | Boutique en ligne avec panier | Node.js, MongoDB | [Site](https://palma-eta.vercel.app/) · [Code](https://github.com/Tahe-clark/palma) |
@@ -18,7 +19,7 @@ Portfolio personnel d'un étudiant en génie logiciel (programme coop) à l'Univ
 | uTaste | Application Android nutritionnelle | Android, SQLite, OpenFoodFacts | — |
 | Afrimyst | Jeu vidéo | Python, Pygame, Figma | — |
 | Portfolio de photographe | Site vitrine et réservation *(en cours)* | Next.js, Supabase, Tailwind | — |
-| LALY | Boutique de bijoux à Abidjan *(en conception)* | Figma | — |
+| LALY | Boutique de bijoux à Abidjan (V1) | Supabase, Wave | [Site](https://laly-boutique.vercel.app/) |
 
 ## Technologies du portfolio
 
